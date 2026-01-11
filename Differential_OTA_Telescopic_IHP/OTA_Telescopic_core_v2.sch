@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
@@ -53,7 +53,6 @@ N -40 -140 -10 -140 {lab=VB55}
 N 300 -140 350 -140 {lab=VB55}
 N 540 130 540 250 {lab=VOUTN}
 N 540 -200 540 -10 {lab=VDD}
-N 260 -200 540 -200 {lab=VDD}
 N 540 310 540 330 {lab=VSS}
 N 540 280 550 280 {lab=VSS}
 N 550 280 550 330 {lab=VSS}
@@ -74,7 +73,6 @@ N -260 -200 -260 20 {lab=VDD}
 N 250 170 260 170 {lab=VSS}
 N 40 80 40 170 {lab=VSS}
 N 250 80 250 170 {lab=VSS}
-N -250 -200 30 -200 {lab=VDD}
 N -210 20 -100 20 {lab=Vo1}
 N 540 330 550 330 {lab=VSS}
 N -525 -200 -260 -200 {lab=VDD}
@@ -138,14 +136,10 @@ N -1350 -200 -1005 -200 {lab=VDD}
 N -690 -400 -690 -360 {lab=VSS}
 N -690 -560 -690 -460 {lab=VB}
 N -690 -360 -580 -360 {lab=VSS}
-N -180 100 -170 100 {lab=#net1}
 N -110 100 -100 100 {lab=Vo1}
 N 390 100 400 100 {lab=Vo2}
-N 460 100 470 100 {lab=#net2}
 N -1200 280 -1170 280 {lab=IB}
 N 390 20 390 100 {lab=Vo2}
-N 530 100 540 100 {lab=VOUTN}
-N -250 100 -240 100 {lab=VOUTP}
 N -100 20 -100 100 {lab=Vo1}
 N -1170 280 -1035 280 {lab=IB}
 N 260 20 390 20 {lab=Vo2}
@@ -157,8 +151,6 @@ N 30 -200 40 -200 {lab=VDD}
 N 40 -200 250 -200 {lab=VDD}
 N -260 -200 -250 -200 {lab=VDD}
 N -260 330 -250 330 {lab=VSS}
-N 540 100 540 130 {lab=VOUTN}
-N -250 100 -250 130 {lab=VOUTP}
 N 30 170 40 170 {lab=VSS}
 N 40 170 250 170 {lab=VSS}
 N -540 330 -260 330 {lab=VSS}
@@ -178,13 +170,21 @@ N -770 35 -770 60 {lab=VB33}
 N -540 -200 -525 -200 {lab=VDD}
 N -550 330 -540 330 {lab=VSS}
 N -540 35 -540 220 {lab=VB22}
-N 540 50 540 100 {lab=VOUTN}
-N -250 50 -250 100 {lab=VOUTP}
+N 540 100 540 130 {lab=VOUTN}
+N -250 100 -250 130 {lab=VOUTP}
 N 30 -10 30 20 {lab=Vo1}
 N 260 -10 260 20 {lab=Vo2}
 N 150 330 160 330 {lab=VSS}
 N 40 280 110 280 {lab=CMFB}
 N 160 330 540 330 {lab=VSS}
+N -250 -200 30 -200 {lab=VDD}
+N 260 -200 540 -200 {lab=VDD}
+N -250 100 -240 100 {lab=VOUTP}
+N -250 50 -250 100 {lab=VOUTP}
+N -180 100 -170 100 {lab=#net1}
+N 460 100 470 100 {lab=#net2}
+N 530 100 540 100 {lab=VOUTN}
+N 540 50 540 100 {lab=VOUTN}
 C {iopin.sym} -1350 -200 0 1 {name=p1 lab=VDD}
 C {iopin.sym} -1350 330 0 1 {name=p2 lab=VSS}
 C {ipin.sym} -60 170 0 0 {name=p5 lab=VINP}
@@ -238,12 +238,12 @@ device=resistor
 m=1}
 C {capa.sym} -140 100 1 0 {name=C1
 m=1
-value=0.63p
+value=0.7p
 footprint=1206
 device="ceramic capacitor"}
 C {capa.sym} 430 100 3 0 {name=C2
 m=1
-value=0.63p
+value=0.7p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_wire.sym} -1110 280 0 0 {name=p23 sig_type=std_logic lab=IB}
@@ -278,9 +278,9 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} -230 20 0 1 {name=M9
 l=0.35u
-w=1.37u
+w=2u
 ng=1
-m=200
+m=250
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -294,7 +294,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 10 -40 0 0 {name=M5
 l=0.5u
-w=4.05u
+w=4.3u
 ng=1
 m=30
 model=sg13_lv_pmos
@@ -310,7 +310,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 280 -40 0 1 {name=M6
 l=0.5u
-w=4.05u
+w=4.3u
 ng=1
 m=30
 model=sg13_lv_pmos
@@ -318,9 +318,9 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 520 20 0 0 {name=M10
 l=0.35u
-w=1.37u
+w=2u
 ng=1
-m=200
+m=250
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -364,11 +364,11 @@ m=55
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {sg13g2_pr/sg13_lv_nmos.sym} 130 280 0 0 {name=M0
+C {sg13g2_pr/sg13_lv_nmos.sym} 130 280 0 0 {name=q
 l=0.3u
 w=30u
 ng=9
-m=32
+m=43
 model=sg13_lv_nmos
 spiceprefix=X
 }

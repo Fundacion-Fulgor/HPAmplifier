@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
@@ -63,7 +63,7 @@ C {vsource.sym} -370 50 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -370 100 0 0 {name=l5 lab=GND}
 C {vsource.sym} -480 -270 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
 C {gnd.sym} 50 -200 0 0 {name=l2 lab=GND}
-C {vsource.sym} -805 -5 0 0 {name=V1 value=1.62 savecurrent=false}
+C {vsource.sym} -805 -5 0 0 {name=V1 value=1.8 savecurrent=false}
 C {gnd.sym} -805 45 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -805 -95 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -715 -5 0 0 {name=V2 value="dc 0.9" savecurrent=false}
@@ -88,8 +88,8 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ss
-.temp 125
+.lib cornerMOSlv.lib mos_tt
+.temp 65
 "}
 C {code.sym} -780 -450 0 0 {name=AC only_toplevel=true value="
 .control
@@ -271,7 +271,7 @@ print x2_vth_M0
 .endc
 
 "
-}
+spice_ignore=true}
 C {code.sym} -770 -300 0 0 {name=TRAN
 only_toplevel=true
 value="
@@ -333,11 +333,11 @@ m=1}
 C {lab_wire.sym} 30 -160 0 0 {name=p14 sig_type=std_logic lab=cmfb}
 C {lab_wire.sym} -20 -490 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 50 -490 0 0 {name=p10 sig_type=std_logic lab=VDD}
-C {isource.sym} -20 -450 0 0 {name=I1 value=95u}
+C {isource.sym} -20 -450 0 0 {name=I1 value=100u}
 C {OTA_Telescopic_core_v2.sym} 30 -300 0 0 {name=x1}
 C {OTA_Telescopic_CMFB2.sym} 40 50 0 1 {name=x2}
 C {gnd.sym} -20 120 0 0 {name=l1 lab=GND}
-C {isource.sym} 30 150 0 0 {name=I2 value=95u}
+C {isource.sym} 30 150 0 0 {name=I2 value=100u}
 C {gnd.sym} 30 190 0 0 {name=l6 lab=GND}
 C {lab_wire.sym} -160 50 0 0 {name=p3 sig_type=std_logic lab=cmfb}
 C {lab_wire.sym} -20 -30 0 0 {name=p5 sig_type=std_logic lab=VDD}
