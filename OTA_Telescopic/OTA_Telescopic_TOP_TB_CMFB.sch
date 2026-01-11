@@ -277,7 +277,7 @@ op
 remzerovec
 let cgg_M0 = @m.x1.xm0.msky130_fd_pr__nfet_01v8_lvt[cgg]
 print cgg_M0
-write OTA_Telescopic_TB2_STB.raw
+write OTA_Telescopic_TOP_TB_CMFB.raw
 set appendwrite
 
 * AC Analysis

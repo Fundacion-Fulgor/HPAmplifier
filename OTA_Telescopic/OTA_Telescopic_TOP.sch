@@ -62,8 +62,8 @@ N 1320 -760 1360 -760 {lab=VOUTP}
 N 1320 -720 1415 -720 {lab=VOUTN}
 N 1415 -720 1415 -305 {lab=VOUTN}
 C {lab_wire.sym} 1170 -840 2 0 {name=p10 sig_type=std_logic lab=VDD}
-C {OTA_Telescopic_core_v2.sym} 1080 -740 0 0 {name=x1}
-C {OTA_Telescopic_CMFB2.sym} 1120 -325 0 1 {name=x2}
+C {OTA_Telescopic_core.sym} 1080 -740 0 0 {name=x1}
+C {OTA_Telescopic_CMFB.sym} 1120 -325 0 1 {name=x2}
 C {lab_wire.sym} 1060 -405 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {sg13g2_pr/sg13_lv_pmos.sym} 1060 -900 0 0 {name=M3
 l=2u
@@ -85,7 +85,6 @@ spiceprefix=X
 }
 C {lab_wire.sym} 1030 -175 0 0 {name=p13 sig_type=std_logic lab=vbn}
 C {lab_wire.sym} 465 -765 0 1 {name=p16 sig_type=std_logic lab=vbn}
-C {currentRef.sym} 295 -775 0 0 {name=x3}
 C {lab_wire.sym} 1100 -640 2 0 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1060 -255 2 0 {name=p4 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1110 -110 2 0 {name=p17 sig_type=std_logic lab=VSS}
@@ -141,3 +140,4 @@ spiceprefix=X
 b=0
 m=1
 }
+C {OTA_Telescopic_currentRef.sym} 295 -775 0 0 {name=x3}
