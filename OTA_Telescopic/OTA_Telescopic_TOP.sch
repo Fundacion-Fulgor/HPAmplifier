@@ -66,9 +66,9 @@ C {OTA_Telescopic_core.sym} 1080 -740 0 0 {name=x1}
 C {OTA_Telescopic_CMFB.sym} 1120 -325 0 1 {name=x2}
 C {lab_wire.sym} 1060 -405 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {sg13g2_pr/sg13_lv_pmos.sym} 1060 -900 0 0 {name=M3
-l=2u
-w=22u
-ng=4
+l=2.5u
+w=12u
+ng=2
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
@@ -76,9 +76,9 @@ spiceprefix=X
 C {lab_wire.sym} 1080 -970 0 0 {name=p15 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 465 -805 0 1 {name=p2 sig_type=std_logic lab=VDD}
 C {sg13g2_pr/sg13_lv_nmos.sym} 1090 -175 0 0 {name=M2
-l=9.86u
-w=9.86u
-ng=1
+l=6.5u
+w=12.5u
+ng=2
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
