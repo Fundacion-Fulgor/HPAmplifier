@@ -36,8 +36,12 @@ N -250 -75 -230 -75 {lab=#net3}
 N -250 -55 -230 -55 {lab=#net3}
 N -35 0 -35 15 {lab=#net4}
 N 10 0 10 15 {lab=#net4}
-N -765 100 -765 165 {lab=VREF}
 N -330 -35 -230 -35 {lab=VN}
+N -705 55 -705 150 {lab=VREF}
+N -740 150 -705 150 {lab=VREF}
+N -740 95 -740 150 {lab=VREF}
+N -765 95 -740 95 {lab=VREF}
+N -765 95 -765 165 {lab=VREF}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
 C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 100000000) AC 0.5" savecurrent=false}
@@ -46,7 +50,7 @@ C {gnd.sym} -885 245 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -885 105 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -765 195 0 0 {name=V2 value=0.9 savecurrent=false}
 C {gnd.sym} -765 245 0 0 {name=l4 lab=GND}
-C {lab_wire.sym} -765 100 0 0 {name=p4 sig_type=std_logic lab=VREF}
+C {lab_wire.sym} -705 55 0 0 {name=p4 sig_type=std_logic lab=VREF}
 C {capa-2.sym} 160 30 0 0 {name=C1
 m=1
 value=500f
@@ -144,6 +148,13 @@ C {code.sym} -740 -245 0 0 {name=save only_toplevel=false value="
 .op
 
 .save all
+
+.save @n.x1.xm3.nsg13_lv_pmos[ids]
+.save @n.x1.xm3.nsg13_lv_pmos[gm]
+
+.save @n.x1.xm2.nsg13_lv_nmos[ids]
+.save @n.x1.xm2.nsg13_lv_nmos[gm]
+
 *OTA
 .save @n.x1.x1.xm1.nsg13_lv_nmos[ids]
 .save @n.x1.x1.xm1.nsg13_lv_nmos[gm]
@@ -159,6 +170,9 @@ C {code.sym} -740 -245 0 0 {name=save only_toplevel=false value="
 
 .save @n.x1.x1.xm1.nsg13_lv_nmos[vsat]
 
+.save @n.x1.x1.xm7.nsg13_lv_pmos[ids]
+.save @n.x1.x1.xm7.nsg13_lv_pmos[gm]
+.save @n.x1.x1.xm1.nsg13_lv_pmos[vdss]
 
 .save @n.x1.x1.xm13.nsg13_lv_nmos[ids]
 .save @n.x1.x1.xm14.nsg13_lv_nmos[ids]
@@ -252,7 +266,7 @@ print x2_vth_M0
 .endc
 
 "
-}
+spice_ignore=true}
 C {code.sym} -850 -100 0 0 {name=TRAN
 only_toplevel=true
 value="

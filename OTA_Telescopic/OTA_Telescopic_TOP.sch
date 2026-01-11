@@ -141,3 +141,5 @@ b=0
 m=1
 }
 C {OTA_Telescopic_currentRef.sym} 295 -775 0 0 {name=x3}
+C {sg13g2_pr/annotate_fet_params.sym} 1215 -995 0 0 {name=annot1 ref=M3}
+C {sg13g2_pr/annotate_fet_params.sym} 1235 -220 0 0 {name=annot2 ref=M2}

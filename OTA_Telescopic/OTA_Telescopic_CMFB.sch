@@ -163,3 +163,4 @@ m=6
 model=sg13_lv_nmos
 spiceprefix=X
 }
+C {sg13g2_pr/annotate_fet_params.sym} -105 235 0 0 {name=annot1 ref=M1}

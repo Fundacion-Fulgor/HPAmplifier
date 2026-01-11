@@ -16,9 +16,6 @@ T {(5.5mA)} -285 -240 0 0 0.4 0.4 {}
 T {(5.5mA)} 505 -240 0 0 0.4 0.4 {}
 T {(600uA)} -5 -240 0 0 0.4 0.4 {}
 T {(600uA)} 205 -240 0 0 0.4 0.4 {}
-T {w=57u
-ng=50
-m=16} 240 240 0 0 0.4 0.4 {}
 N 30 -110 30 -70 {lab=Vx1}
 N 30 20 30 50 {lab=Vo1}
 N 30 110 30 140 {lab=Vy1}
@@ -206,7 +203,7 @@ C {ipin.sym} -1350 -160 0 0 {name=p3 lab=CMFB}
 C {lab_wire.sym} 40 280 0 0 {name=p20 sig_type=std_logic lab=CMFB}
 C {lab_wire.sym} -540 -360 0 0 {name=p22 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 30 20 0 0 {name=p4 sig_type=std_logic lab=Vo1}
-C {vsource.sym} -330 -430 0 0 {name=V1 value=1.12 savecurrent=false}
+C {vsource.sym} -330 -430 0 0 {name=V1 value=1.15 savecurrent=false}
 C {lab_wire.sym} -330 -520 0 0 {name=p21 sig_type=std_logic lab=VB5}
 C {lab_wire.sym} 140 220 0 0 {name=p25 sig_type=std_logic lab=P}
 C {lab_wire.sym} -860 -140 0 0 {name=p26 sig_type=std_logic lab=VB55}
@@ -234,9 +231,9 @@ C {lab_wire.sym} 30 120 0 0 {name=p35 sig_type=std_logic lab=Vy1}
 C {lab_wire.sym} 260 120 0 1 {name=p36 sig_type=std_logic lab=Vy2}
 C {sg13g2_pr/sg13_lv_pmos.sym} -975 -140 0 1 {name=M15
 l=0.35u
-w=1.45u
+w=1.4u
 ng=1
-m=6
+m=8
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -266,7 +263,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 10 -140 0 0 {name=M7
 l=0.7u
-w=6.85u
+w=7u
 ng=1
 m=30
 model=sg13_lv_pmos
@@ -282,7 +279,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 280 -140 0 1 {name=M8
 l=0.7u
-w=6.85u
+w=7u
 ng=1
 m=30
 model=sg13_lv_pmos
@@ -348,7 +345,7 @@ C {sg13g2_pr/sg13_lv_nmos.sym} 130 280 0 0 {name=M0
 l=0.3u
 w=30u
 ng=9
-m=32
+m=34
 model=sg13_lv_nmos
 spiceprefix=X
 }
@@ -412,13 +409,15 @@ m=1
 }
 C {sg13g2_pr/cap_cmim.sym} 430 100 3 0 {name=C3
 model=cap_cmim
-w=22.4e-6
-l=22.4e-6
+w=21.5e-6
+l=21.5e-6
 m=1
 spiceprefix=X}
 C {sg13g2_pr/cap_cmim.sym} -140 100 1 0 {name=C1
 model=cap_cmim
-w=22.4e-6
-l=22.4e-6
+w=21.5e-6
+l=21.5e-6
 m=1
 spiceprefix=X}
+C {sg13g2_pr/annotate_fet_params.sym} 45 -410 0 0 {name=annot1 ref=M0}
+C {sg13g2_pr/annotate_fet_params.sym} 200 -410 0 0 {name=annot2 ref=M1}
