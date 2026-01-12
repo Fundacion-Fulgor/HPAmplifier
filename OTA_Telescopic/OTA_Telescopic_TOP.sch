@@ -32,13 +32,11 @@ N 1080 -900 1140 -900 {lab=VDD}
 N 1140 -940 1140 -900 {lab=VDD}
 N 1080 -940 1140 -940 {lab=VDD}
 N 1080 -970 1080 -940 {lab=VDD}
-N 445 -805 465 -805 {lab=VDD}
-N 445 -765 465 -765 {lab=vbn}
-N 445 -745 495 -745 {lab=VSS}
+N 445 -675 465 -675 {lab=vbn}
 N 1415 -720 1585 -720 {lab=VOUTN}
 N 980 -700 1000 -700 {lab=VNin}
 N 980 -780 1000 -780 {lab=VPin}
-N 445 -785 465 -785 {lab=vbp}
+N 445 -705 465 -705 {lab=vbp}
 N 1000 -900 1040 -900 {
 lab=vbp}
 N 780 -1045 780 -820 {lab=VPout}
@@ -61,6 +59,8 @@ N 1360 -760 1360 -345 {lab=VOUTP}
 N 1320 -760 1360 -760 {lab=VOUTP}
 N 1320 -720 1415 -720 {lab=VOUTN}
 N 1415 -720 1415 -305 {lab=VOUTN}
+N 295 -765 295 -745 {lab=VDD}
+N 295 -625 295 -605 {lab=VSS}
 C {lab_wire.sym} 1170 -840 2 0 {name=p10 sig_type=std_logic lab=VDD}
 C {OTA_Telescopic_core.sym} 1080 -740 0 0 {name=x1}
 C {OTA_Telescopic_CMFB.sym} 1120 -325 0 1 {name=x2}
@@ -74,7 +74,7 @@ model=sg13_lv_pmos
 spiceprefix=X
 }
 C {lab_wire.sym} 1080 -970 0 0 {name=p15 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 465 -805 0 1 {name=p2 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 295 -765 0 1 {name=p2 sig_type=std_logic lab=VDD}
 C {sg13g2_pr/sg13_lv_nmos.sym} 1090 -175 0 0 {name=M2
 l=6.5u
 w=12.5u
@@ -84,11 +84,11 @@ model=sg13_lv_nmos
 spiceprefix=X
 }
 C {lab_wire.sym} 1030 -175 0 0 {name=p13 sig_type=std_logic lab=vbn}
-C {lab_wire.sym} 465 -765 0 1 {name=p16 sig_type=std_logic lab=vbn}
+C {lab_wire.sym} 465 -675 0 1 {name=p16 sig_type=std_logic lab=vbn}
 C {lab_wire.sym} 1100 -640 2 0 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1060 -255 2 0 {name=p4 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1110 -110 2 0 {name=p17 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 495 -745 2 0 {name=p20 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 295 -605 2 0 {name=p20 sig_type=std_logic lab=VSS}
 C {ipin.sym} 645 -820 0 0 {name=p21 lab=VP}
 C {ipin.sym} 645 -640 0 0 {name=p7 lab=VN}
 C {opin.sym} 1585 -760 0 0 {name=p8 lab=VOUTP}
@@ -100,7 +100,7 @@ C {opin.sym} 800 -640 0 0 {name=p18 lab=VNout}
 C {iopin.sym} 380 -905 2 0 {name=p19 lab=VDD}
 C {iopin.sym} 380 -875 2 0 {name=p23 lab=VSS}
 C {iopin.sym} 1110 -405 0 0 {name=p11 lab=VREF}
-C {lab_wire.sym} 465 -785 0 1 {name=p24 sig_type=std_logic lab=vbp}
+C {lab_wire.sym} 465 -705 0 1 {name=p24 sig_type=std_logic lab=vbp}
 C {lab_wire.sym} 1000 -900 0 0 {name=p25 sig_type=std_logic lab=vbp}
 C {ipin.sym} 1080 -600 0 0 {name=p3 lab=CMFBin}
 C {opin.sym} 920 -325 2 0 {name=p14 lab=CMFBout}
@@ -140,6 +140,6 @@ spiceprefix=X
 b=0
 m=1
 }
-C {OTA_Telescopic_currentRef.sym} 295 -775 0 0 {name=x3}
+C {OTA_Telescopic_currentRef.sym} 295 -685 0 0 {name=x3}
 C {sg13g2_pr/annotate_fet_params.sym} 1215 -995 0 0 {name=annot1 ref=M3}
 C {sg13g2_pr/annotate_fet_params.sym} 1235 -220 0 0 {name=annot2 ref=M2}

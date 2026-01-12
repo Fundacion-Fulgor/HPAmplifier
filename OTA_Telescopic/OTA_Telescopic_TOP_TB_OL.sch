@@ -59,7 +59,7 @@ C {OTA_Telescopic_TOP.sym} -70 -30 0 0 {name=x1}
 C {gnd.sym} -70 70 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} -105 -140 0 0 {name=p2 sig_type=std_logic lab=VREF}
 C {lab_wire.sym} -70 -140 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {vsource.sym} -780 245 0 0 {name=V6 value=1.8 savecurrent=false}
+C {vsource.sym} -780 245 0 0 {name=V6 value=1.98 savecurrent=false}
 C {gnd.sym} -780 295 0 0 {name=l8 lab=GND}
 C {lab_wire.sym} -780 155 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {res.sym} -275 -70 1 0 {name=R3
@@ -80,10 +80,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_tt
+.lib cornerMOSlv.lib mos_ff
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 65
+.temp 0
 "
 spice_ignore=false}
 C {code.sym} -795 -200 0 0 {name=AC only_toplevel=true value="
@@ -171,134 +171,6 @@ print sqrt(@n.xm1.nsg13_lv_nmos[sfl])
 print sqrt(@n.xm1.nsg13_lv_nmos[sid])
 .endc
 "}
-C {code.sym} -675 -200 0 0 {name=save only_toplevel=false value="
-.op
-
-.save all
-*OTA
-.save @m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[gm]
-.save @m.x1.xm2.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.x1.xm2.msky130_fd_pr__nfet_01v8_lvt[gm]
-.save @m.x1.xm10.msky130_fd_pr__pfet_01v8_lvt[cgg]
-
-.save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gm]
-.save @m.x1.xm10.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x1.xm10.msky130_fd_pr__pfet_01v8_lvt[gm]
-
-.save @m.x1.xm0.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.x1.xm0.msky130_fd_pr__nfet_01v8_lvt[gm]
-
-.save @m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[vdssat]
-
-
-.save @m.x1.xm13.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.x1.xm13.msky130_fd_pr__nfet_01v8_lvt[gm]
-.save @m.x1.xm14.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.x1.xm15.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x1.xm16.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.x1.xm17.msky130_fd_pr__nfet_01v8_lvt[id]
-
-.save @m.x1.xm18.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x1.xm19.msky130_fd_pr__nfet_01v8_lvt[id]
-
-.save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gm]
-
-*CMFB
-.save @m.x2.xm0.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x2.xm1.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x2.xm1.msky130_fd_pr__pfet_01v8_lvt[gm]
-.save @m.x2.xm2.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x2.xm2.msky130_fd_pr__pfet_01v8_lvt[gm]
-.save @m.x2.xm3.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x2.xm3.msky130_fd_pr__pfet_01v8_lvt[gm]
-.save @m.x2.xm4.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x2.xm4.msky130_fd_pr__pfet_01v8_lvt[gm]
-.save @m.x2.xm5.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x2.xm5.msky130_fd_pr__pfet_01v8_lvt[gm]
-.save @m.x2.xm6.msky130_fd_pr__pfet_01v8_lvt[id]
-.save @m.x2.xm6.msky130_fd_pr__pfet_01v8_lvt[gm]
-
-.save @m.x2.xm7.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.x2.xm7.msky130_fd_pr__nfet_01v8_lvt[gm]
-.save @m.x2.xm8.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.x2.xm8.msky130_fd_pr__nfet_01v8_lvt[gm]
-
-
-
-.control
-
-let vdssat_M1 = @m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[vdsat]
-let vdssat_M3 = @m.x1.xm3.msky130_fd_pr__nfet_01v8_lvt[vdsat]
-let vdssat_M5 = @m.x1.xm5.msky130_fd_pr__pfet_01v8_lvt[vdsat]
-let vdssat_M7 = @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vdsat]
-let vdssat_M0 = @m.x1.xm0.msky130_fd_pr__nfet_01v8_lvt[vdsat]
-
-print vdssat_M1
-print vdssat_M3
-print vdssat_M5
-print vdssat_M7
-print vdssat_M0
-
-let ro_M1 = 1/@m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[gds]
-let ro_M3 = 1/@m.x1.xm3.msky130_fd_pr__nfet_01v8_lvt[gds]
-let ro_M5 = 1/@m.x1.xm5.msky130_fd_pr__pfet_01v8_lvt[gds]
-let ro_M7 = 1/@m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gds]
-let ro_M0 = 1/@m.x1.xm0.msky130_fd_pr__nfet_01v8_lvt[gds]
-let ro_M9 = 1/@m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gds]
-let ro_M11 = 1/@m.x1.xm11.msky130_fd_pr__nfet_01v8_lvt[gds]
-
-print ro_M1
-print ro_M3
-print ro_M5
-print ro_M7
-print ro_M0
-print ro_M9
-print ro_M11
-
-let gm_M1 = @m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[gm]
-let gm_M3 = @m.x1.xm3.msky130_fd_pr__nfet_01v8_lvt[gm]
-let gm_M5 = @m.x1.xm5.msky130_fd_pr__pfet_01v8_lvt[gm]
-let gm_M7 = @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gm]
-let gm_M0 = @m.x1.xm0.msky130_fd_pr__nfet_01v8_lvt[gm]
-
-print gm_M1
-print gm_M3
-print gm_M5
-print gm_M7
-print gm_M0
-
-let gmb_M3 = @m.x1.xm3.msky130_fd_pr__nfet_01v8_lvt[gmbs]
-let gmb_M5 = @m.x1.xm5.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-
-print gmb_M3
-print gmb_M5
-
-
-let cgg_M10 = @m.x1.xm10.msky130_fd_pr__pfet_01v8_lvt[cgg]
-print cgg_M10
-
-let cgd_M10 = @m.x1.xm10.msky130_fd_pr__pfet_01v8_lvt[cgd]
-print cgd_M10
-
-let cgd_M0 = @m.x1.xm0.msky130_fd_pr__nfet_01v8_lvt[cgd]
-print cgd_M0
-
-
-*CMFB
-
-let x2_vdssat_M0 = @m.x2.xm0.msky130_fd_pr__pfet_01v8_lvt[vdsat]
-let x2_vth_M0 = @m.x2.xm0.msky130_fd_pr__pfet_01v8_lvt[vth]
-
-print x2_vdssat_M0
-print x2_vth_M0
-
-.endc
-
-"
-spice_ignore=true}
 C {code.sym} -905 -200 0 0 {name=NGSPICE
 only_toplevel=true
 value="
@@ -318,3 +190,126 @@ spice_ignore=true}
 C {vsource.sym} -700 245 0 0 {name=V2 value="dc 0.9 pwl(0 0.8 1u 0.8 1.01u 0.9 0.15m 0.9 0.15m 0)" savecurrent=false}
 C {gnd.sym} -700 295 0 0 {name=l4 lab=GND}
 C {lab_wire.sym} -700 155 0 0 {name=p4 sig_type=std_logic lab=VREF}
+C {code.sym} -660 -195 0 0 {name=save only_toplevel=false value="
+.op
+
+.save all
+
+.save @n.x1.xm3.nsg13_lv_pmos[ids]
+.save @n.x1.xm3.nsg13_lv_pmos[gm]
+
+.save @n.x1.xm2.nsg13_lv_nmos[ids]
+.save @n.x1.xm2.nsg13_lv_nmos[gm]
+
+*OTA
+.save @n.x1.x1.xm1.nsg13_lv_nmos[ids]
+.save @n.x1.x1.xm1.nsg13_lv_nmos[gm]
+.save @n.x1.x1.xm2.nsg13_lv_nmos[ids]
+.save @n.x1.x1.xm2.nsg13_lv_nmos[gm]
+
+.save @n.x1.x1.xm9.nsg13_lv_pmos[ids]
+.save @n.x1.x1.xm9.nsg13_lv_pmos[gm]
+.save @n.x1.x1.xm10.nsg13_lv_pmos[ids]
+.save @n.x1.x1.xm10.nsg13_lv_pmos[gm]
+
+.save @n.x1.x1.xm0.nsg13_lv_nmos[ids]
+
+.save @n.x1.x1.xm1.nsg13_lv_nmos[vsat]
+
+.save @n.x1.x1.xm7.nsg13_lv_pmos[ids]
+.save @n.x1.x1.xm7.nsg13_lv_pmos[gm]
+.save @n.x1.x1.xm1.nsg13_lv_pmos[vdss]
+
+.save @n.x1.x1.xm13.nsg13_lv_nmos[ids]
+.save @n.x1.x1.xm14.nsg13_lv_nmos[ids]
+.save @n.x1.x1.xm15.nsg13_lv_nmos[ids]
+.save @n.x1.x1.xm16.nsg13_lv_nmos[ids]
+.save @n.x1.x1.xm17.nsg13_lv_nmos[ids]
+
+.save @n.x1.x1.xm18.nsg13_lv_pmos[ids]
+.save @n.x1.x1.xm19.nsg13_lv_pmos[ids]
+
+*CMFB
+.save @n.x1.x2.xm0.nsg13_lv_pmos[ids]
+.save @n.x1.x2.xm1.nsg13_lv_pmos[ids]
+.save @n.x1.x2.xm1.nsg13_lv_pmos[gm]
+.save @n.x1.x2.xm2.nsg13_lv_pmos[ids]
+.save @n.x1.x2.xm2.nsg13_lv_pmos[gm]
+.save @n.x1.x2.xm3.nsg13_lv_pmos[ids]
+.save @n.x1.x2.xm3.nsg13_lv_pmos[gm]
+.save @n.x1.x2.xm4.nsg13_lv_pmos[ids]
+.save @n.x1.x2.xm4.nsg13_lv_pmos[gm]
+.save @n.x1.x2.xm5.nsg13_lv_pmos[ids]
+.save @n.x1.x2.xm5.nsg13_lv_pmos[gm]
+.save @n.x1.x2.xm6.nsg13_lv_pmos[ids]
+.save @n.x1.x2.xm6.nsg13_lv_pmos[gm]
+
+.save @n.x1.x2.xm7.nsg13_lv_nmos[ids]
+.save @n.x1.x2.xm7.nsg13_lv_nmos[gm]
+.save @n.x1.x2.xm8.nsg13_lv_nmos[ids]
+.save @n.x1.x2.xm8.nsg13_lv_nmos[gm]
+
+
+
+.control
+
+let vsat_M1 = @n.x1.x1.xm1.nsg13_lv_nmos[vsat]
+let vsat_M3 = @n.x1.x1.xm3.nsg13_lv_nmos[vsat]
+let vsat_M5 = @n.x1.x1.xm5.nsg13_lv_pmos[vsat]
+let vsat_M7 = @n.x1.x1.xm7.nsg13_lv_pmos[vsat]
+let vsat_M0 = @n.x1.x1.xm0.nsg13_lv_nmos[vsat]
+
+let vsat_M9 = @n.x1.x1.xm9.nsg13_lv_pmos[vsat]
+let vsat_M11 = @n.x1.x1.xm11.nsg13_lv_nmos[vsat]
+
+print vsat_M1
+print vsat_M3
+print vsat_M5
+print vsat_M7
+print vsat_M0
+print vsat_M9
+print vsat_M11
+
+let ro_M1 = 1/@n.x1.x1.xm1.nsg13_lv_nmos[gds]
+let ro_M3 = 1/@n.x1.x1.xm3.nsg13_lv_nmos[gds]
+let ro_M5 = 1/@n.x1.x1.xm5.nsg13_lv_pmos[gds]
+let ro_M7 = 1/@n.x1.x1.xm7.nsg13_lv_pmos[gds]
+let ro_M0 = 1/@n.x1.x1.xm0.nsg13_lv_nmos[gds]
+
+print ro_M1
+print ro_M3
+print ro_M5
+print ro_M7
+print ro_M0
+
+let gm_M1 = @n.x1.x1.xm1.nsg13_lv_nmos[gm]
+let gm_M3 = @n.x1.x1.xm3.nsg13_lv_nmos[gm]
+let gm_M5 = @n.x1.x1.xm5.nsg13_lv_pmos[gm]
+let gm_M7 = @n.x1.x1.xm7.nsg13_lv_pmos[gm]
+let gm_M0 = @n.x1.x1.xm0.nsg13_lv_nmos[gm]
+
+print gm_M1
+print gm_M3
+print gm_M5
+print gm_M7
+print gm_M0
+
+let gmb_M3 = @n.x1.x1.xm3.nsg13_lv_nmos[gmb]
+let gmb_M5 = @n.x1.x1.xm5.nsg13_lv_pmos[gmb]
+
+print gmb_M3
+print gmb_M5
+
+
+*CMFB
+
+let x2_vsat_M0 = @n.x1.x2.xm0.nsg13_lv_pmos[vsat]
+let x2_vth_M0 = @n.x1.x2.xm0.nsg13_lv_pmos[vth]
+
+print x2_vsat_M0
+print x2_vth_M0
+
+.endc
+
+"
+}
