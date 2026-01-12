@@ -37,20 +37,16 @@ N -250 -55 -230 -55 {lab=#net3}
 N -35 0 -35 15 {lab=#net4}
 N 10 0 10 15 {lab=#net4}
 N -330 -35 -230 -35 {lab=VN}
-N -705 55 -705 150 {lab=VREF}
-N -740 150 -705 150 {lab=VREF}
-N -740 95 -740 150 {lab=VREF}
-N -765 95 -740 95 {lab=VREF}
-N -765 95 -765 165 {lab=VREF}
+N -765 95 -765 165 {lab=#net5}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
 C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 100000000) AC 0.5" savecurrent=false}
-C {vsource.sym} -885 195 0 0 {name=V1 value=1.98 savecurrent=false}
+C {vsource.sym} -885 195 0 0 {name=V1 value=1.8 savecurrent=false}
 C {gnd.sym} -885 245 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -885 105 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -765 195 0 0 {name=V2 value=0.9 savecurrent=false}
 C {gnd.sym} -765 245 0 0 {name=l4 lab=GND}
-C {lab_wire.sym} -705 55 0 0 {name=p4 sig_type=std_logic lab=VREF}
+C {lab_wire.sym} -765 95 0 0 {name=p4 sig_type=std_logic lab=VREF}
 C {capa-2.sym} 160 30 0 0 {name=C1
 m=1
 value=500f
@@ -70,10 +66,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ff
+.lib cornerMOSlv.lib mos_tt
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 0
+.temp 65
 "}
 C {code.sym} -860 -250 0 0 {name=AC only_toplevel=true value="
 .control
@@ -116,7 +112,7 @@ write OTA_Telescopic_TOP_TB_CL.raw
 .endc
 "
 
-spice_ignore=true}
+}
 C {devices/launcher.sym} -530 -250 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
@@ -309,7 +305,7 @@ print onoise_total
 
 .endc
 "
-}
+spice_ignore=true}
 C {lab_wire.sym} -370 -150 0 0 {name=p7 sig_type=std_logic lab=VP}
 C {lab_wire.sym} -310 -35 0 0 {name=p8 sig_type=std_logic lab=VN}
 C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 100000000) AC 0.5" savecurrent=false}
