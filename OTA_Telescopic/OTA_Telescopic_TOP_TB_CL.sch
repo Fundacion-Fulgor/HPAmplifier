@@ -37,7 +37,7 @@ N -250 -55 -230 -55 {lab=#net3}
 N -35 0 -35 15 {lab=#net4}
 N 10 0 10 15 {lab=#net4}
 N -330 -35 -230 -35 {lab=VN}
-N -765 95 -765 165 {lab=#net5}
+N -765 95 -765 165 {lab=VREF}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
 C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 100000000) AC 0.5" savecurrent=false}

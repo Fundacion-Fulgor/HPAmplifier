@@ -1,0 +1,42 @@
+*.param temp=65
+.temp 65
+
+.lib cornerMOSlv.lib mos_tt
+*.lib cornerMOSlv.lib mos_tt_stat
+.lib cornerRES.lib res_typ
+
+.param w_p=22u
+.param l_p=2u
+.param w_n=17u
+.param l_n=17u
+.param k=15
+
+.control
+
+alter V1 1.8
+save all
+op
+print I(Vd2)
+
+dc V1 1.62 1.98 0.01
+plot I(Vd2)
+*write bgr.raw
+*wrdata Idd_vs_Vdd_SS_125C_R_typ.csv I(Vd2)
+
+*dc V1 0 1.98 0.01
+*plot I(Vd2)
+
+alter V1 1.8
+dc temp 0 125 0.5
+plot I(Vd2)
+*plot I(Vd2)
+*wrdata Idd_vs_temp_SS_1_62_R_typ.csv I(Vd2)
+
+*reset
+*tran 5p 10n
+*plot V(VDD)
+*plot I(Vd2)
+*plot I(Vd1)
+*wrdata tran.csv V(VDD) I(Vd2) I(Vd1)
+
+.endc

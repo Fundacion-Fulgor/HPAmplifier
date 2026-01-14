@@ -312,4 +312,4 @@ print x2_vth_M0
 .endc
 
 "
-}
+spice_ignore=true}
