@@ -109,7 +109,7 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ff
+.lib cornerMOSlv.lib mos_ss
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
 .temp 125

@@ -342,7 +342,7 @@ model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 130 280 0 0 {name=M0
-l=0.15u
+l=0.20u
 w=30u
 ng=9
 m=6
