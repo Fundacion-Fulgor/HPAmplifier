@@ -409,14 +409,14 @@ m=1
 }
 C {sg13g2_pr/cap_cmim.sym} 430 100 3 0 {name=C3
 model=cap_cmim
-w=21.8e-6
-l=21.8e-6
+w=21.4e-6
+l=21.4e-6
 m=1
 spiceprefix=X}
 C {sg13g2_pr/cap_cmim.sym} -140 100 1 0 {name=C1
 model=cap_cmim
-w=21.8e-6
-l=21.8e-6
+w=21.4e-6
+l=21.4e-6
 m=1
 spiceprefix=X}
 C {sg13g2_pr/annotate_fet_params.sym} 45 -410 0 0 {name=annot1 ref=M0}

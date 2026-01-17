@@ -98,7 +98,7 @@ C {OTA_Telescopic_TOP.sym} 245 -10 0 0 {name=x1}
 C {gnd.sym} 245 90 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 210 -120 0 0 {name=p2 sig_type=std_logic lab=VREF}
 C {lab_wire.sym} 245 -120 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {vsource.sym} -275 265 0 0 {name=V6 value=1.62 savecurrent=false}
+C {vsource.sym} -275 265 0 0 {name=V6 value=1.98 savecurrent=false}
 C {gnd.sym} -275 315 0 0 {name=l8 lab=GND}
 C {lab_wire.sym} -275 175 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {vsource.sym} -185 265 0 0 {name=V8 value=0.9 savecurrent=false}
@@ -109,10 +109,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ss
+.lib cornerMOSlv.lib mos_ff
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 125
+.temp 0
 "
 }
 C {devices/launcher.sym} -195 -400 0 0 {name=h1
@@ -271,6 +271,7 @@ value="
 .options savecurrents reltol=1e-3 abstol=1e-12 gmin=1e-15
 .control
 save all
+set color0 = white
 
 * Operating Point Analysis
 op

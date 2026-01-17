@@ -6,7 +6,7 @@ S {}
 F {}
 E {}
 T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} -635 510 0 0 0.4 0.4 {}
-N -75 150 -75 230 {lab=VP}
+N -75 150 -75 230 {lab=VCM}
 N -75 290 -75 310 {lab=GND}
 N -510 235 -510 255 {lab=GND}
 N -510 115 -510 175 {lab=VDD}
@@ -15,19 +15,19 @@ N -330 115 -330 175 {lab=VREF}
 N 535 70 535 100 {lab=GND}
 N 635 70 635 100 {lab=GND}
 N 635 -70 635 10 {lab=Vout2}
-N -75 150 45 150 {lab=VP}
-N 45 10 45 150 {lab=VP}
-N 45 10 75 10 {lab=VP}
-N -185 -170 -185 150 {lab=VP}
-N -185 -170 75 -170 {lab=VP}
-N -185 150 -75 150 {lab=VP}
+N -75 150 45 150 {lab=VCM}
+N 45 10 45 150 {lab=VCM}
+N 45 10 75 10 {lab=VCM}
+N -185 -170 -185 150 {lab=VCM}
+N -185 -170 75 -170 {lab=VCM}
+N -185 150 -75 150 {lab=VCM}
 N 445 -90 535 -90 {lab=Vout1}
 N 535 -90 535 10 {lab=Vout1}
 N 445 -70 635 -70 {lab=Vout2}
-N 75 -170 75 -140 {lab=VP}
-N 75 -140 145 -140 {lab=VP}
-N 75 -25 75 10 {lab=VP}
-N 75 -25 145 -25 {lab=VP}
+N 75 -170 75 -140 {lab=VCM}
+N 75 -140 145 -140 {lab=VCM}
+N 75 -25 75 10 {lab=VCM}
+N 75 -25 145 -25 {lab=VCM}
 N 145 -120 145 -100 {lab=#net1}
 N 145 -65 145 -45 {lab=#net2}
 N 295 10 295 20 {lab=GND}
@@ -36,7 +36,7 @@ N 295 -190 295 -170 {lab=VDD}
 N 340 10 385 10 {lab=#net3}
 C {vsource.sym} -75 260 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -75 310 0 0 {name=l5 lab=GND}
-C {vsource.sym} -510 205 0 0 {name=V1 value="dc 1.8 pwl(0 0 100n 1.8)" savecurrent=false}
+C {vsource.sym} -510 205 0 0 {name=V1 value="dc 1.62 pwl(0 0 10n 1.62)" savecurrent=false}
 C {gnd.sym} -510 255 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -510 115 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -330 205 0 0 {name=V2 value="dc 0.9" savecurrent=false}
@@ -61,10 +61,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_tt
+.lib cornerMOSlv.lib mos_ss
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 65
+.temp 125
 "}
 C {code.sym} -485 -240 0 0 {name=AC only_toplevel=true value="
 .control
@@ -254,6 +254,7 @@ only_toplevel=true
 value="
 
 .control
+ set color0 = white
 
 set wr_singlescale
 set wr_vecnames
@@ -262,20 +263,16 @@ save all
 tran 2.44140625p 1000n
 *write NMOS_diode_large_signal.raw
 
-let Vout1 = v(Vout1)
-let Vout2 = v(Vout2)
-let Vin = v(VP)-v(VN)
+let VCM = v(Vout1)
 let VDD = v(VDD)
+let IDD = -i(V1)
 
-let Vout = v(Vout1)-v(Vout2)
-wrdata Vout_tt_100_sym_DC.txt Vout
-wrdata Vin_tt_100_sym_DC.txt Vin
+wrdata VCM_ss_10ns_DC.txt VCM
+wrdata IDD_ss_10ns_DC.txt IDD
 
-plot Vin Vout
-plot Vout1 Vout2
-plot v(VP)-v(VN)
-*plot v(VP) v(VN)
+plot VCM
 plot VDD
+plot IDD
 
 let Vo1 = v(x1.Vo1)
 let Vo2 = v(x1.Vo2)
@@ -293,8 +290,7 @@ print onoise_total
 
 .endc
 "}
-C {lab_wire.sym} 10 -170 0 0 {name=p7 sig_type=std_logic lab=VP}
-C {lab_wire.sym} 55 10 0 0 {name=p8 sig_type=std_logic lab=VN}
+C {lab_wire.sym} 10 -170 0 0 {name=p7 sig_type=std_logic lab=VCM}
 C {code.sym} -365 -90 0 0 {name=STEP
 only_toplevel=true
 value="
