@@ -260,15 +260,15 @@ set wr_singlescale
 set wr_vecnames
 
 save all
-tran 2.44140625p 1000n
+tran 10p 500n
 *write NMOS_diode_large_signal.raw
 
 let VCM = v(Vout1)
 let VDD = v(VDD)
 let IDD = -i(V1)
 
-wrdata VCM_ss_10ns_DC.txt VCM
-wrdata IDD_ss_10ns_DC.txt IDD
+*wrdata VCM_ss_10ns_DC.txt VCM
+*wrdata IDD_ss_10ns_DC.txt IDD
 
 plot VCM
 plot VDD

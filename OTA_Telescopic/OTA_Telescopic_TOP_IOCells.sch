@@ -10,12 +10,12 @@ N 1100 -660 1100 -640 {lab=VSS}
 N 1080 -660 1080 -600 {lab=CMFBin}
 N 1060 -265 1060 -255 {lab=VSS}
 N 920 -325 970 -325 {lab=CMFBout}
-N 1110 -1045 1320 -1045 {lab=voutn}
+N 1110 -1045 1320 -1045 {lab=voutp}
 N 780 -640 780 -500 {lab=VNout}
 N 1100 -500 1320 -500 {lab=voutp}
 N 1320 -720 1320 -500 {lab=voutp}
 N 1200 -305 1415 -305 {lab=voutp}
-N 1200 -345 1360 -345 {lab=voutn}
+N 1200 -345 1360 -345 {lab=voutp}
 N 1060 -405 1060 -385 {lab=VDD}
 N 1110 -265 1110 -205 {lab=#net1}
 N 780 -640 800 -640 {lab=VNout}
@@ -39,7 +39,7 @@ N 445 -705 465 -705 {lab=vbp}
 N 1000 -900 1040 -900 {
 lab=vbp}
 N 780 -1045 780 -820 {lab=VPout}
-N 1320 -1045 1320 -760 {lab=voutn}
+N 1320 -1045 1320 -760 {lab=voutp}
 N 1100 -840 1100 -820 {lab=VDD}
 N 1100 -840 1170 -840 {lab=VDD}
 N 1080 -870 1080 -820 {lab=#net2}
@@ -47,12 +47,12 @@ N 760 -640 780 -640 {lab=VNout}
 N 780 -500 1040 -500 {lab=VNout}
 N 760 -820 780 -820 {lab=VPout}
 N 780 -1045 1050 -1045 {lab=VPout}
-N 1200 -760 1320 -760 {lab=voutn}
+N 1200 -760 1320 -760 {lab=voutp}
 N 1200 -720 1320 -720 {lab=voutp}
 N 380 -905 440 -905 {lab=VDD}
 N 380 -875 440 -875 {lab=VSS}
-N 1360 -760 1360 -345 {lab=voutn}
-N 1320 -760 1360 -760 {lab=voutn}
+N 1360 -760 1360 -345 {lab=voutp}
+N 1320 -760 1360 -760 {lab=voutp}
 N 1415 -720 1415 -305 {lab=voutp}
 N 295 -765 295 -745 {lab=VDD}
 N 295 -625 295 -605 {lab=VSS}
@@ -104,7 +104,7 @@ N 1415 -720 1580 -720 {
 lab=voutp}
 N 1320 -720 1415 -720 {lab=voutp}
 N 1360 -760 1580 -760 {
-lab=voutn}
+lab=voutp}
 N 1970 -1120 2000 -1120 {
 lab=VREF}
 N 1910 -1180 1970 -1180 {
@@ -309,8 +309,8 @@ padtype=0
 }
 C {opin.sym} 2625 -720 0 0 {name=p8 lab=VOUTP}
 C {opin.sym} 2625 -590 0 0 {name=p22 lab=VOUTN}
-C {lab_wire.sym} 1580 -720 0 1 {name=p30 sig_type=std_logic lab=voutp}
-C {lab_wire.sym} 1580 -760 0 1 {name=p33 sig_type=std_logic lab=voutn}
+C {lab_wire.sym} 1580 -720 0 1 {name=p30 sig_type=std_logic lab=voutn}
+C {lab_wire.sym} 1580 -760 0 1 {name=p33 sig_type=std_logic lab=voutp}
 C {lab_wire.sym} 2140 -530 0 0 {name=p37 sig_type=std_logic lab=voutn}
 C {opin.sym} 800 -820 0 0 {name=p12 lab=VPout}
 C {opin.sym} 800 -640 0 0 {name=p18 lab=VNout}

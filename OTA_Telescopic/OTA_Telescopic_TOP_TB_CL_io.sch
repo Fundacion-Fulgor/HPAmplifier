@@ -43,8 +43,8 @@ N -670 155 -670 170 {lab=sub!}
 N -670 155 -610 155 {lab=sub!}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
-C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 100000000) AC 0.5" savecurrent=false}
-C {vsource.sym} -885 195 0 0 {name=V1 value=1.62 savecurrent=false}
+C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
+C {vsource.sym} -885 195 0 0 {name=V1 value=1.8 savecurrent=false}
 C {gnd.sym} -885 245 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -885 105 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -765 195 0 0 {name=V2 value=0.9 savecurrent=false}
@@ -69,10 +69,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ss
+.lib cornerMOSlv.lib mos_tt
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 125
+.temp 65
 "}
 C {code.sym} -860 -250 0 0 {name=AC only_toplevel=true value="
 .control
@@ -115,7 +115,7 @@ write OTA_Telescopic_TOP_TB_CL.raw
 .endc
 "
 
-}
+spice_ignore=true}
 C {devices/launcher.sym} -530 -250 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
@@ -266,52 +266,9 @@ print x2_vth_M0
 
 "
 spice_ignore=true}
-C {code.sym} -850 -100 0 0 {name=TRAN
-only_toplevel=true
-value="
-
-.control
-
-set wr_singlescale
-set wr_vecnames
-
-save all
-tran 2.44140625p 1000n
-*write NMOS_diode_large_signal.raw
-
-let Vout1 = v(Vout1)
-let Vout2 = v(Vout2)
-let Vin = v(VP)-v(VN)
-
-let Vout = v(Vout1)-v(Vout2)
-wrdata Vout_ss_100_sym.txt Vout
-wrdata Vin_ss_100_sym.txt Vin
-
-plot Vin Vout
-plot Vout1 Vout2
-plot v(VP)-v(VN)
-*plot v(VP) v(VN)
-
-let Vo1 = v(x1.Vo1)
-let Vo2 = v(x1.Vo2)
-
-let Vo = Vo1-Vo2
-
-wrdata Vo Vo
-
-reset    
-noise v(Vout1) V5 dec 100 1 0.5e9 1
-setplot noise1
-*plot onoise_spectrum
-setplot noise2
-print onoise_total
-
-.endc
-"
-spice_ignore=true}
 C {lab_wire.sym} -370 -150 0 0 {name=p7 sig_type=std_logic lab=VP}
 C {lab_wire.sym} -310 -35 0 0 {name=p8 sig_type=std_logic lab=VN}
-C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 100000000) AC 0.5" savecurrent=false}
+C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
 C {code.sym} -740 -100 0 0 {name=STEP
 only_toplevel=true
 value="
@@ -345,3 +302,47 @@ l=0.78e-6
 }
 C {sg13g2_pr/sub.sym} -610 155 0 0 {name=l2 lab=sub!}
 C {gnd.sym} -670 245 0 0 {name=l6 lab=GND}
+C {code.sym} -860 -110 0 0 {name=TRAN
+only_toplevel=true
+value="
+
+.control
+ set color0 = white
+
+set wr_singlescale
+set wr_vecnames
+
+save all
+tran 2.44140625p 250n
+*write NMOS_diode_large_signal.raw
+
+let Vout1 = v(Vout1)
+let Vout2 = v(Vout2)
+let Vin = v(VP)-v(VN)
+
+let Vout = v(Vout1)-v(Vout2)
+wrdata Vout_tt_400_io.txt Vout
+wrdata Vin_tt_400_io.txt Vin
+
+plot Vin Vout
+plot Vout1 Vout2
+plot v(VP)-v(VN)
+*plot v(VP) v(VN)
+
+let Vo1 = v(x1.Vo1)
+let Vo2 = v(x1.Vo2)
+
+let Vo = Vo1-Vo2
+
+wrdata Vo Vo
+
+reset    
+noise v(Vout1) V5 dec 100 1 0.5e9 1
+setplot noise1
+*plot onoise_spectrum
+setplot noise2
+print onoise_total
+
+.endc
+"
+}

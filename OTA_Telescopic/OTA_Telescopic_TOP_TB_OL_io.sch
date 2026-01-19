@@ -61,7 +61,7 @@ C {lab_wire.sym} 170 20 0 0 {name=p18 sig_type=std_logic lab=Vout1}
 C {gnd.sym} -70 70 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} -105 -140 0 0 {name=p2 sig_type=std_logic lab=VREF}
 C {lab_wire.sym} -70 -140 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {vsource.sym} -780 245 0 0 {name=V6 value=1.62 savecurrent=false}
+C {vsource.sym} -780 245 0 0 {name=V6 value=1.98 savecurrent=false}
 C {gnd.sym} -780 295 0 0 {name=l8 lab=GND}
 C {lab_wire.sym} -780 155 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {res.sym} -275 -70 1 0 {name=R3
@@ -82,10 +82,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ss
+.lib cornerMOSlv.lib mos_ff
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 125
+.temp 0
 "
 spice_ignore=false}
 C {code.sym} -795 -200 0 0 {name=AC only_toplevel=true value="

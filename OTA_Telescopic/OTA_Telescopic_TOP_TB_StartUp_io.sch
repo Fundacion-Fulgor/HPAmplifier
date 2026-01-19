@@ -6,10 +6,10 @@ S {}
 F {}
 E {}
 T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} -635 510 0 0 0.4 0.4 {}
+T {Tiene problemas de convergencia, debe simularse DC} -1090 -90 0 0 0.4 0.4 {}
 N -75 150 -75 230 {lab=VCM}
 N -75 290 -75 310 {lab=GND}
 N -510 235 -510 255 {lab=GND}
-N -510 115 -510 175 {lab=VDD}
 N -330 235 -330 255 {lab=GND}
 N -330 115 -330 175 {lab=VREF}
 N 535 70 535 100 {lab=GND}
@@ -37,9 +37,10 @@ N 340 10 385 10 {lab=#net3}
 N -670 240 -670 255 {lab=GND}
 N -670 165 -670 180 {lab=sub!}
 N -670 165 -610 165 {lab=sub!}
+N -510 115 -510 175 {lab=VDD}
 C {vsource.sym} -75 260 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -75 310 0 0 {name=l5 lab=GND}
-C {vsource.sym} -510 205 0 0 {name=V1 value="dc 1.62 pwl(0 0 10n 1.62)" savecurrent=false}
+C {vsource.sym} -510 205 0 0 {name=V1 value=1.98 savecurrent=false}
 C {gnd.sym} -510 255 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -510 115 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -330 205 0 0 {name=V2 value="dc 0.9" savecurrent=false}
@@ -64,10 +65,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ss
+.lib cornerMOSlv.lib mos_ff
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 125
+.temp 0
 "}
 C {code.sym} -485 -240 0 0 {name=AC only_toplevel=true value="
 .control
@@ -252,47 +253,6 @@ print x2_vth_M0
 "
 spice_ignore=true
 }
-C {code.sym} -475 -90 0 0 {name=TRAN
-only_toplevel=true
-value="
-
-.control
- set color0 = white
-
-set wr_singlescale
-set wr_vecnames
-
-save all
-tran 2.44140625p 1000n
-*write NMOS_diode_large_signal.raw
-
-let VCM = v(Vout1)
-let VDD = v(VDD)
-let IDD = -i(V1)
-
-wrdata VCM_ss_10ns_DC.txt VCM
-wrdata IDD_ss_10ns_DC.txt IDD
-
-plot VCM
-plot VDD
-plot IDD
-
-let Vo1 = v(x1.Vo1)
-let Vo2 = v(x1.Vo2)
-
-let Vo = Vo1-Vo2
-
-wrdata Vo Vo
-
-reset    
-noise v(Vout1) V5 dec 100 1 0.5e9 1
-setplot noise1
-*plot onoise_spectrum
-setplot noise2
-print onoise_total
-
-.endc
-"}
 C {lab_wire.sym} 10 -170 0 0 {name=p7 sig_type=std_logic lab=VCM}
 C {code.sym} -365 -90 0 0 {name=STEP
 only_toplevel=true
@@ -326,4 +286,41 @@ C {code_shown.sym} -805 -415 0 0 {name=IOCells models only_toplevel=false value=
 .include sg13g2_bondpad.lib 
 .include diodes.lib
 .lib cornerMOShv.lib mos_tt
+"}
+C {code.sym} -485 -90 0 0 {name=TRAN
+only_toplevel=true
+value="
+
+.control
+ set color0 = white
+
+set wr_singlescale
+set wr_vecnames
+
+save v(VDD) v(Vout1) v(Vout2) i(V1)
+save v(x1.Vo1) v(x1.Vo2)
+
+.options method=gear
+tran 10p 500n
+*write NMOS_diode_large_signal.raw
+
+let VCM = v(Vout1)
+let VDD = v(VDD)
+let IDD = -i(V1)
+
+wrdata VCM_tt_10ns_DC_io.txt VCM
+wrdata IDD_tt_10ns_DC_io.txt IDD
+
+plot VCM
+plot VDD
+plot IDD
+
+let Vo1 = v(x1.Vo1)
+let Vo2 = v(x1.Vo2)
+
+let Vo = Vo1-Vo2
+
+wrdata Vo Vo
+
+.endc
 "}
