@@ -38,6 +38,9 @@ N -35 0 -35 15 {lab=#net4}
 N 10 0 10 15 {lab=#net4}
 N -330 -35 -230 -35 {lab=VN}
 N -765 95 -765 165 {lab=VREF}
+N -670 230 -670 245 {lab=GND}
+N -670 155 -670 170 {lab=sub!}
+N -670 155 -610 155 {lab=sub!}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
 C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
@@ -112,7 +115,7 @@ write OTA_Telescopic_TOP_TB_CL.raw
 .endc
 "
 
-}
+spice_ignore=true}
 C {devices/launcher.sym} -530 -250 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
@@ -263,7 +266,43 @@ print x2_vth_M0
 
 "
 spice_ignore=true}
-C {code.sym} -850 -100 0 0 {name=TRAN
+C {lab_wire.sym} -370 -150 0 0 {name=p7 sig_type=std_logic lab=VP}
+C {lab_wire.sym} -310 -35 0 0 {name=p8 sig_type=std_logic lab=VN}
+C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
+C {code.sym} -740 -100 0 0 {name=STEP
+only_toplevel=true
+value="
+
+.temp 27
+.control
+
+save all
+tran 0.001n 0.05u
+
+plot v(Vout2)
+plot v(VREF)
+
+.endc
+"
+spice_ignore=true}
+C {gnd.sym} -80 10 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} -115 -200 0 0 {name=p2 sig_type=std_logic lab=VREF}
+C {lab_wire.sym} -80 -200 2 0 {name=p3 sig_type=std_logic lab=VDD}
+C {OTA_Telescopic_TOP_IOCells.sym} -80 -90 0 0 {name=x1}
+C {code_shown.sym} -990 -380 0 0 {name=IOCells models only_toplevel=false value="
+.include sg13g2_bondpad.lib 
+.include diodes.lib
+.lib cornerMOShv.lib mos_tt
+"}
+C {sg13g2_pr/ptap1.sym} -670 200 0 0 {name=R1
+model=ptap1
+spiceprefix=X
+w=0.78e-6
+l=0.78e-6
+}
+C {sg13g2_pr/sub.sym} -610 155 0 0 {name=l2 lab=sub!}
+C {gnd.sym} -670 245 0 0 {name=l6 lab=GND}
+C {code.sym} -860 -110 0 0 {name=TRAN
 only_toplevel=true
 value="
 
@@ -274,7 +313,7 @@ set wr_singlescale
 set wr_vecnames
 
 save all
-tran 0.6103515625p 250n
+tran 2.44140625p 250n
 *write NMOS_diode_large_signal.raw
 
 let Vout1 = v(Vout1)
@@ -282,8 +321,8 @@ let Vout2 = v(Vout2)
 let Vin = v(VP)-v(VN)
 
 let Vout = v(Vout1)-v(Vout2)
-wrdata Vout_ff_400.txt Vout
-wrdata Vin_ff_400.txt Vin
+wrdata Vout_tt_400_io.txt Vout
+wrdata Vin_tt_400_io.txt Vin
 
 plot Vin Vout
 plot Vout1 Vout2
@@ -306,27 +345,4 @@ print onoise_total
 
 .endc
 "
-spice_ignore=true}
-C {lab_wire.sym} -370 -150 0 0 {name=p7 sig_type=std_logic lab=VP}
-C {lab_wire.sym} -310 -35 0 0 {name=p8 sig_type=std_logic lab=VN}
-C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
-C {code.sym} -740 -100 0 0 {name=STEP
-only_toplevel=true
-value="
-
-.temp 27
-.control
-
-save all
-tran 0.001n 0.05u
-
-plot v(Vout2)
-plot v(VREF)
-
-.endc
-"
-spice_ignore=true}
-C {OTA_Telescopic_TOP.sym} -80 -90 0 0 {name=x1}
-C {gnd.sym} -80 10 0 0 {name=l1 lab=GND}
-C {lab_wire.sym} -115 -200 0 0 {name=p2 sig_type=std_logic lab=VREF}
-C {lab_wire.sym} -80 -200 2 0 {name=p3 sig_type=std_logic lab=VDD}
+}

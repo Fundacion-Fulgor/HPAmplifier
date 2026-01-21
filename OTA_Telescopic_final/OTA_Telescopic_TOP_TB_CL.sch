@@ -23,21 +23,21 @@ N -560 140 -450 140 {lab=#net1}
 N 70 -100 160 -100 {lab=Vout1}
 N 160 -100 160 0 {lab=Vout1}
 N 70 -80 260 -80 {lab=Vout2}
-N -330 -35 -330 50 {lab=VN}
 N -250 -130 -250 -110 {lab=#net2}
-N -250 -75 -250 -55 {lab=#net3}
+N -250 -70 -250 -50 {lab=#net3}
 N -80 0 -80 10 {lab=GND}
 N -115 -200 -115 -180 {lab=VREF}
 N -80 -200 -80 -180 {lab=VDD}
 N -35 15 10 15 {lab=#net4}
 N -250 -130 -230 -130 {lab=#net2}
 N -250 -110 -230 -110 {lab=#net2}
-N -250 -75 -230 -75 {lab=#net3}
-N -250 -55 -230 -55 {lab=#net3}
+N -250 -70 -230 -70 {lab=#net3}
+N -250 -50 -230 -50 {lab=#net3}
 N -35 0 -35 15 {lab=#net4}
 N 10 0 10 15 {lab=#net4}
-N -330 -35 -230 -35 {lab=VN}
 N -765 95 -765 165 {lab=VREF}
+N -330 -30 -230 -30 {lab=#net5}
+N -330 -30 -330 50 {lab=#net5}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
 C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
@@ -308,7 +308,7 @@ print onoise_total
 "
 spice_ignore=true}
 C {lab_wire.sym} -370 -150 0 0 {name=p7 sig_type=std_logic lab=VP}
-C {lab_wire.sym} -310 -35 0 0 {name=p8 sig_type=std_logic lab=VN}
+C {lab_wire.sym} -310 -30 0 0 {name=p8 sig_type=std_logic lab=VN}
 C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
 C {code.sym} -740 -100 0 0 {name=STEP
 only_toplevel=true
@@ -326,7 +326,7 @@ plot v(VREF)
 .endc
 "
 spice_ignore=true}
-C {OTA_Telescopic_TOP.sym} -80 -90 0 0 {name=x1}
 C {gnd.sym} -80 10 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} -115 -200 0 0 {name=p2 sig_type=std_logic lab=VREF}
 C {lab_wire.sym} -80 -200 2 0 {name=p3 sig_type=std_logic lab=VDD}
+C {OTA_Telescopic_TOP_wp.sym} -80 -90 0 0 {name=x1}
