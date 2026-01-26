@@ -36,7 +36,7 @@ N 295 -190 295 -170 {lab=VDD}
 N 340 10 385 10 {lab=#net3}
 C {vsource.sym} -75 260 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -75 310 0 0 {name=l5 lab=GND}
-C {vsource.sym} -510 205 0 0 {name=V1 value="dc 1.62 pwl(0 0 10n 1.62)" savecurrent=false}
+C {vsource.sym} -510 205 0 0 {name=V1 value="dc 1.8 pwl(0 0 10n 1.8)" savecurrent=false}
 C {gnd.sym} -510 255 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -510 115 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -330 205 0 0 {name=V2 value="dc 0.9" savecurrent=false}
@@ -61,10 +61,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ss
+.lib cornerMOSlv.lib mos_tt
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 125
+.temp 65
 "}
 C {code.sym} -485 -240 0 0 {name=AC only_toplevel=true value="
 .control

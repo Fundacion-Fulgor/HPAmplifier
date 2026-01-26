@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>design rules: sg13g2_minimal | layout cell: OTA_Telescopic_CMFB</description>
- <original-file>OTA_Telescopic_CMFB.gds</original-file>
+ <description>design rules: sg13g2_minimal | layout cell: M7M8</description>
+ <original-file>/foss/designs/HPAmplifier/OTA_Telescopic_final/OTA_Telescopic_core.gds</original-file>
  <generator>drc: script='/headless/.klayout/drc/drc_minimal.lydrc'</generator>
- <top-cell>OTA_Telescopic_CMFB</top-cell>
+ <top-cell>M7M8</top-cell>
  <tags>
  </tags>
  <categories>
@@ -472,7 +472,7 @@
  </categories>
  <cells>
   <cell>
-   <name>OTA_Telescopic_CMFB</name>
+   <name>M7M8</name>
    <variant/>
    <layout-name/>
    <references>
@@ -482,146 +482,170 @@
  <items>
   <item>
    <tags/>
-   <category>'M1.j/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <category>'AFil.g/g1'</category>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'AFil.g2/g3'</category>
+   <cell>M7M8</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M1.j/k'</category>
+   <cell>M7M8</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M2.j/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M3.j/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M4.j/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M5.j/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M1Fil.h/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M2Fil.h/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M3Fil.h/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M4Fil.h/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M5Fil.h/k'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'TM1.c/d'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'TM2.c/d'</category>
-   <cell>OTA_Telescopic_CMFB</cell>
+   <cell>M7M8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (7.8,-0.85;7.8,20.19;60.56,20.19;60.56,-0.85)</value>
+    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
    </values>
   </item>
  </items>
