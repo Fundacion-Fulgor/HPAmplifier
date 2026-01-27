@@ -44,7 +44,7 @@ N -670 155 -610 155 {lab=sub!}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
 C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
-C {vsource.sym} -885 195 0 0 {name=V1 value=1.8 savecurrent=false}
+C {vsource.sym} -885 195 0 0 {name=V1 value=1.98 savecurrent=false}
 C {gnd.sym} -885 245 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -885 105 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -765 195 0 0 {name=V2 value=0.9 savecurrent=false}
@@ -69,10 +69,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_tt
+.lib cornerMOSlv.lib mos_ff
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 65
+.temp 0
 "}
 C {code.sym} -860 -250 0 0 {name=AC only_toplevel=true value="
 .control
@@ -321,8 +321,8 @@ let Vout2 = v(Vout2)
 let Vin = v(VP)-v(VN)
 
 let Vout = v(Vout1)-v(Vout2)
-wrdata Vout_tt_400_io.txt Vout
-wrdata Vin_tt_400_io.txt Vin
+wrdata Vout_ff_400_io.txt Vout
+wrdata Vin_ff_400_io.txt Vin
 
 plot Vin Vout
 plot Vout1 Vout2

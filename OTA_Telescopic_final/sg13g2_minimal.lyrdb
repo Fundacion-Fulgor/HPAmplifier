@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>design rules: sg13g2_minimal | layout cell: M7M8</description>
- <original-file>/foss/designs/HPAmplifier/OTA_Telescopic_final/OTA_Telescopic_core.gds</original-file>
+ <description>design rules: sg13g2_minimal | layout cell: TEST</description>
+ <original-file>OTA_Telescopic_core.gds</original-file>
  <generator>drc: script='/headless/.klayout/drc/drc_minimal.lydrc'</generator>
- <top-cell>M7M8</top-cell>
+ <top-cell>TEST</top-cell>
  <tags>
  </tags>
  <categories>
@@ -472,7 +472,7 @@
  </categories>
  <cells>
   <cell>
-   <name>M7M8</name>
+   <name>TEST</name>
    <variant/>
    <layout-name/>
    <references>
@@ -483,169 +483,169 @@
   <item>
    <tags/>
    <category>'AFil.g/g1'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
-   <category>'AFil.g2/g3'</category>
-   <cell>M7M8</cell>
+   <category>'GFil.g'</category>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M1.j/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M2.j/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M3.j/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M4.j/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M5.j/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M1Fil.h/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M2Fil.h/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M3Fil.h/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M4Fil.h/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M5Fil.h/k'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'TM1.c/d'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'TM2.c/d'</category>
-   <cell>M7M8</cell>
+   <cell>TEST</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.75,-0.46;-0.75,36;6.65,36;6.65,-0.46)</value>
+    <value>polygon: (-0.225,-0.195;-0.225,0.405;0.515,0.405;0.515,-0.195)</value>
    </values>
   </item>
  </items>
