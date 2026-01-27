@@ -3,7 +3,7 @@
  <description>Main DRC Run Report at</description>
  <original-file />
  <generator>drc: script='/foss/pdks/ihp-sg13g2/libs.tech/klayout/tech/drc/ihp-sg13g2.drc'</generator>
- <top-cell>TEST</top-cell>
+ <top-cell>OTA_Telescopic_currentRef</top-cell>
  <tags>
  </tags>
  <categories>
@@ -3209,7 +3209,7 @@
  </categories>
  <cells>
   <cell>
-   <name>TEST</name>
+   <name>OTA_Telescopic_currentRef</name>
    <variant />
    <layout-name />
    <references>
@@ -3217,65 +3217,5 @@
   </cell>
  </cells>
  <items>
-  <item>
-   <tags />
-   <category>'LU.b'</category>
-   <cell>TEST</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0.325,-0.195;0.325,0.405;0.515,0.405;0.515,-0.195)</value>
-   </values>
-  </item>
- <item>
-   <tags />
-   <category>'NW.a'</category>
-   <cell>TEST</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>edge-pair: (-0.225,-0.195;-0.225,0.405)|(0.305,0.405;0.305,-0.195)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'NW.a'</category>
-   <cell>TEST</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>edge-pair: (0.305,-0.195;-0.225,-0.195)|(-0.225,0.405;0.305,0.405)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'NW.d'</category>
-   <cell>TEST</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>edge-pair: (0.305,0.405;0.305,-0.195)/(0.325,-0.195;0.325,0.405)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Act.d'</category>
-   <cell>TEST</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0.325,-0.195;0.325,0.405;0.515,0.405;0.515,-0.195)</value>
-   </values>
-  </item>
  </items>
 </report-database>

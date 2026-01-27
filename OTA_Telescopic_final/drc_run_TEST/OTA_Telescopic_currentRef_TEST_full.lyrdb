@@ -3,7 +3,7 @@
  <description>Main DRC Run Report at</description>
  <original-file />
  <generator>drc: script='/foss/pdks/ihp-sg13g2/libs.tech/klayout/tech/drc/ihp-sg13g2.drc'</generator>
- <top-cell>OTA_Telescopic_FB</top-cell>
+ <top-cell>TEST</top-cell>
  <tags>
  </tags>
  <categories>
@@ -3209,409 +3209,47 @@
  </categories>
  <cells>
   <cell>
-   <name>OTA_Telescopic_FB</name>
+   <name>TEST</name>
    <variant />
    <layout-name />
    <references>
    </references>
   </cell>
-  <cell>
-   <name>OTA_core</name>
-   <variant />
-   <layout-name>OTA_core</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 33.665,13.91</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>OTA_Telescopic_core</name>
-   <variant />
-   <layout-name>OTA_Telescopic_core</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 33.665,13.91</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M0</name>
-   <variant />
-   <layout-name>M0</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 37.16,14.63</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>nmos$5</name>
-   <variant />
-   <layout-name>nmos$5</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 36.72,14.475</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M11M12</name>
-   <variant />
-   <layout-name>M11M12</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 22.905,19.505</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>nmos$3</name>
-   <variant />
-   <layout-name>nmos$3</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 22.49,19.355</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M13M14M16</name>
-   <variant />
-   <layout-name>M13M14M16</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 12.67,14.62</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M19</name>
-   <variant />
-   <layout-name>M19</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 19.955,16.775</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>nmos$4</name>
-   <variant />
-   <layout-name>nmos$4</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 19.52,16.625</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M1M2</name>
-   <variant />
-   <layout-name>M1M2</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 49.625,19.485</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>nmos$1</name>
-   <variant />
-   <layout-name>nmos$1</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 49.2,19.355</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M3M4</name>
-   <variant />
-   <layout-name>M3M4</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 45.845,19.475</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>nmos$2</name>
-   <variant />
-   <layout-name>nmos$2</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 45.45,19.355</trans>
-    </ref>
-   </references>
-  </cell>
  <cell>
-   <name>M5M6</name>
+   <name>via_stack$8</name>
    <variant />
-   <layout-name>M5M6</layout-name>
+   <layout-name>via_stack$8</layout-name>
    <references>
     <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 60.685,19.475</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>pmos$2</name>
-   <variant />
-   <layout-name>pmos$2</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 60.23,19.355</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M7M8</name>
-   <variant />
-   <layout-name>M7M8</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 53.68,32.15</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>pmos$3</name>
-   <variant />
-   <layout-name>pmos$3</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 53.24,32</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M9M10</name>
-   <variant />
-   <layout-name>M9M10</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 12.675,28.645</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>pmos$1</name>
-   <variant />
-   <layout-name>pmos$1</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 12.22,28.55</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M17M18</name>
-   <variant />
-   <layout-name>M17M18</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 19.23,22.4</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>pmos$5</name>
-   <variant />
-   <layout-name>pmos$5</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 18.79,22.255</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>M15</name>
-   <variant />
-   <layout-name>M15</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 12.715,22.395</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>pmos$4</name>
-   <variant />
-   <layout-name>pmos$4</layout-name>
-   <references>
-    <ref>
-     <parent>OTA_Telescopic_FB</parent>
-     <trans>r0 *1 12.26,22.255</trans>
+     <parent>TEST</parent>
+     <trans>r0 *1 -0.36,0.36</trans>
     </ref>
    </references>
   </cell>
  </cells>
  <items>
-  <item>
-   <tags />
-   <category>'LU.b'</category>
-   <cell>nmos$5</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,3.33;5.52,3.33;5.52,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.b'</category>
-   <cell>nmos$3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,4.8;1.74,4.8;1.74,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.b'</category>
-   <cell>nmos$4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,0.5;1.48,0.5;1.48,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.b'</category>
-   <cell>nmos$1</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,1.1;0.83,1.1;0.83,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.b'</category>
-   <cell>nmos$2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,1.9;0.84,1.9;0.84,0)</value>
-   </values>
-  </item>
  <item>
    <tags />
    <category>'M1.d'</category>
-   <cell>nmos$4</cell>
+   <cell>via_stack$8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment />
    <image />
    <values>
-    <value>polygon: (0.07,0;0.07,0.5;0.23,0.5;0.23,0)</value>
+    <value>polygon: (-0.145,-0.105;-0.145,0.105;0.145,0.105;0.145,-0.105)</value>
    </values>
   </item>
   <item>
    <tags />
-   <category>'M1.d'</category>
-   <cell>nmos$4</cell>
+   <category>'M2.d'</category>
+   <cell>via_stack$8</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment />
    <image />
    <values>
-    <value>polygon: (1.25,0;1.25,0.5;1.41,0.5;1.41,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.a'</category>
-   <cell>pmos$2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,4.05;1.18,4.05;1.18,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.a'</category>
-   <cell>pmos$3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,7;1.38,7;1.38,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.a'</category>
-   <cell>pmos$1</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,1.37;1.03,1.37;1.03,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.a'</category>
-   <cell>pmos$5</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,2.05;1.03,2.05;1.03,0)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'LU.a'</category>
-   <cell>pmos$4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (0,0;0,1.4;1.03,1.4;1.03,0)</value>
+    <value>polygon: (-0.145,-0.1;-0.145,0.1;0.145,0.1;0.145,-0.1)</value>
    </values>
   </item>
  </items>
