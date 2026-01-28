@@ -45,8 +45,8 @@ C {lab_wire.sym} 1060 -370 2 0 {name=p4 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1080 -950 2 0 {name=p20 sig_type=std_logic lab=VSS}
 C {ipin.sym} 980 -750 0 0 {name=p21 lab=VP}
 C {ipin.sym} 980 -730 0 0 {name=p7 lab=VN}
-C {opin.sym} 1585 -760 0 0 {name=p8 lab=VOUTP}
-C {opin.sym} 1585 -720 0 0 {name=p22 lab=VOUTN}
+C {opin.sym} 1585 -720 0 0 {name=p8 lab=VOUTP}
+C {opin.sym} 1585 -760 0 0 {name=p22 lab=VOUTN}
 C {ipin.sym} 980 -770 0 0 {name=p6 lab=VPin}
 C {ipin.sym} 980 -710 0 0 {name=p9 lab=VNin}
 C {opin.sym} 980 -790 2 0 {name=p12 lab=VPout}

@@ -6,57 +6,57 @@ S {}
 F {}
 E {}
 T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} -635 510 0 0 0.4 0.4 {}
-N -75 150 -75 230 {lab=VCM}
-N -75 290 -75 310 {lab=GND}
-N -510 235 -510 255 {lab=GND}
-N -510 115 -510 175 {lab=VDD}
-N -330 235 -330 255 {lab=GND}
-N -330 115 -330 175 {lab=VREF}
-N 535 70 535 100 {lab=GND}
-N 635 70 635 100 {lab=GND}
-N 635 -70 635 10 {lab=Vout2}
-N -75 150 45 150 {lab=VCM}
-N 45 10 45 150 {lab=VCM}
-N 45 10 75 10 {lab=VCM}
-N -185 -170 -185 150 {lab=VCM}
-N -185 -170 75 -170 {lab=VCM}
-N -185 150 -75 150 {lab=VCM}
-N 445 -90 535 -90 {lab=Vout1}
-N 535 -90 535 10 {lab=Vout1}
-N 445 -70 635 -70 {lab=Vout2}
-N 75 -170 75 -140 {lab=VCM}
-N 75 -140 145 -140 {lab=VCM}
-N 75 -25 75 10 {lab=VCM}
-N 75 -25 145 -25 {lab=VCM}
-N 145 -120 145 -100 {lab=#net1}
-N 145 -65 145 -45 {lab=#net2}
-N 295 10 295 20 {lab=GND}
-N 260 -190 260 -170 {lab=VREF}
-N 295 -190 295 -170 {lab=VDD}
-N 340 10 385 10 {lab=#net3}
-C {vsource.sym} -75 260 0 0 {name=V7 value=1.25 savecurrent=false}
-C {gnd.sym} -75 310 0 0 {name=l5 lab=GND}
-C {vsource.sym} -510 205 0 0 {name=V1 value="dc 1.8 pwl(0 0 10n 1.8)" savecurrent=false}
-C {gnd.sym} -510 255 0 0 {name=l3 lab=GND}
-C {lab_wire.sym} -510 115 0 0 {name=p1 sig_type=std_logic lab=VDD}
-C {vsource.sym} -330 205 0 0 {name=V2 value="dc 0.9" savecurrent=false}
-C {gnd.sym} -330 255 0 0 {name=l4 lab=GND}
-C {lab_wire.sym} -330 115 0 0 {name=p4 sig_type=std_logic lab=VREF}
-C {capa-2.sym} 535 40 0 0 {name=C1
+N 625 -230 625 -150 {lab=VCM}
+N 625 -90 625 -70 {lab=GND}
+N 190 -145 190 -125 {lab=GND}
+N 190 -265 190 -205 {lab=VDD}
+N 370 -145 370 -125 {lab=GND}
+N 370 -265 370 -205 {lab=VREF}
+N 1235 -310 1235 -280 {lab=GND}
+N 1335 -310 1335 -280 {lab=GND}
+N 1335 -450 1335 -370 {lab=Vout2}
+N 625 -230 745 -230 {lab=VCM}
+N 745 -370 745 -230 {lab=VCM}
+N 745 -370 775 -370 {lab=VCM}
+N 515 -550 515 -230 {lab=VCM}
+N 515 -550 775 -550 {lab=VCM}
+N 515 -230 625 -230 {lab=VCM}
+N 1145 -470 1235 -470 {lab=Vout1}
+N 1235 -470 1235 -370 {lab=Vout1}
+N 1145 -450 1335 -450 {lab=Vout2}
+N 775 -550 775 -520 {lab=VCM}
+N 775 -520 845 -520 {lab=VCM}
+N 775 -400 775 -370 {lab=VCM}
+N 775 -400 845 -400 {lab=VCM}
+N 845 -500 845 -480 {lab=#net1}
+N 845 -440 845 -420 {lab=#net2}
+N 995 -370 995 -360 {lab=GND}
+N 960 -570 960 -550 {lab=VREF}
+N 995 -570 995 -550 {lab=VDD}
+N 1040 -370 1085 -370 {lab=#net3}
+C {vsource.sym} 625 -120 0 0 {name=V7 value=1.25 savecurrent=false}
+C {gnd.sym} 625 -70 0 0 {name=l5 lab=GND}
+C {vsource.sym} 190 -175 0 0 {name=V1 value="dc 1.8 pwl(0 0 10n 1.8)" savecurrent=false}
+C {gnd.sym} 190 -125 0 0 {name=l3 lab=GND}
+C {lab_wire.sym} 190 -265 0 0 {name=p1 sig_type=std_logic lab=VDD}
+C {vsource.sym} 370 -175 0 0 {name=V2 value="dc 0.9" savecurrent=false}
+C {gnd.sym} 370 -125 0 0 {name=l4 lab=GND}
+C {lab_wire.sym} 370 -265 0 0 {name=p4 sig_type=std_logic lab=VREF}
+C {capa-2.sym} 1235 -340 0 0 {name=C1
 m=1
 value=500f
 footprint=1206
 device=polarized_capacitor}
-C {gnd.sym} 535 100 0 0 {name=l10 lab=GND}
-C {capa-2.sym} 635 40 0 0 {name=C2
+C {gnd.sym} 1235 -280 0 0 {name=l10 lab=GND}
+C {capa-2.sym} 1335 -340 0 0 {name=C2
 m=1
 value=500f
 footprint=1206
 device=polarized_capacitor}
-C {gnd.sym} 635 100 0 0 {name=l7 lab=GND}
-C {lab_wire.sym} 635 -70 0 0 {name=p19 sig_type=std_logic lab=Vout2}
-C {lab_wire.sym} 535 -30 0 0 {name=p18 sig_type=std_logic lab=Vout1}
-C {devices/code.sym} -615 -240.390625 0 0 {name=TT_MODELS
+C {gnd.sym} 1335 -280 0 0 {name=l7 lab=GND}
+C {lab_wire.sym} 1335 -450 0 0 {name=p19 sig_type=std_logic lab=Vout2}
+C {lab_wire.sym} 1235 -410 0 0 {name=p18 sig_type=std_logic lab=Vout1}
+C {devices/code.sym} 85 -620.390625 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -66,7 +66,7 @@ value="
 .lib cornerCAP.lib cap_typ
 .temp 65
 "}
-C {code.sym} -485 -240 0 0 {name=AC only_toplevel=true value="
+C {code.sym} 215 -620 0 0 {name=AC only_toplevel=true value="
 .control
 save all
  set color0 = white
@@ -108,7 +108,7 @@ write OTA_Telescopic_TB2_CL.raw
 "
 
 spice_ignore=true}
-C {devices/launcher.sym} -155 -240 0 0 {name=h3
+C {devices/launcher.sym} 545 -620 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
 value="
@@ -135,7 +135,7 @@ print sqrt(@n.xm1.nsg13_lv_nmos[sfl])
 print sqrt(@n.xm1.nsg13_lv_nmos[sid])
 .endc
 "}
-C {code.sym} -365 -235 0 0 {name=save only_toplevel=false value="
+C {code.sym} 335 -615 0 0 {name=save only_toplevel=false value="
 .op
 
 .save all
@@ -249,7 +249,7 @@ print x2_vth_M0
 "
 spice_ignore=true
 }
-C {code.sym} -475 -90 0 0 {name=TRAN
+C {code.sym} 225 -470 0 0 {name=TRAN
 only_toplevel=true
 value="
 
@@ -290,8 +290,8 @@ print onoise_total
 
 .endc
 "}
-C {lab_wire.sym} 10 -170 0 0 {name=p7 sig_type=std_logic lab=VCM}
-C {code.sym} -365 -90 0 0 {name=STEP
+C {lab_wire.sym} 710 -550 0 0 {name=p7 sig_type=std_logic lab=VCM}
+C {code.sym} 335 -470 0 0 {name=STEP
 only_toplevel=true
 value="
 
@@ -307,7 +307,7 @@ plot v(VREF)
 .endc
 "
 spice_ignore=true}
-C {OTA_Telescopic_TOP.sym} 295 -80 0 0 {name=x1}
-C {gnd.sym} 295 20 0 0 {name=l1 lab=GND}
-C {lab_wire.sym} 260 -190 0 0 {name=p2 sig_type=std_logic lab=VREF}
-C {lab_wire.sym} 295 -190 0 0 {name=p3 sig_type=std_logic lab=VDD}
+C {gnd.sym} 995 -360 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} 960 -570 0 0 {name=p2 sig_type=std_logic lab=VREF}
+C {lab_wire.sym} 995 -570 0 0 {name=p3 sig_type=std_logic lab=VDD}
+C {OTA_Telescopic_TOP_wp.sym} 995 -460 0 0 {name=x2}

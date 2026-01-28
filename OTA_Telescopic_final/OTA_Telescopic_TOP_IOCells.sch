@@ -5,345 +5,228 @@ V {}
 S {}
 F {}
 E {}
-T {REVISAR IOPIN VREF} 1730 -1240 0 0 0.4 0.4 {}
-N 1100 -660 1100 -640 {lab=VSS}
-N 1080 -660 1080 -600 {lab=CMFBin}
-N 1060 -265 1060 -255 {lab=VSS}
-N 920 -325 970 -325 {lab=CMFBout}
-N 1110 -1045 1320 -1045 {lab=voutp}
-N 780 -640 780 -500 {lab=VNout}
-N 1100 -500 1320 -500 {lab=voutp}
-N 1320 -720 1320 -500 {lab=voutp}
-N 1200 -305 1415 -305 {lab=voutp}
-N 1200 -345 1360 -345 {lab=voutp}
-N 1060 -405 1060 -385 {lab=VDD}
-N 1110 -265 1110 -205 {lab=#net1}
-N 780 -640 800 -640 {lab=VNout}
-N 780 -820 800 -820 {lab=VPout}
-N 1030 -175 1070 -175 {
-lab=vbn}
-N 1110 -175 1155 -175 {lab=VSS}
-N 1155 -175 1155 -130 {lab=VSS}
-N 1110 -130 1155 -130 {lab=VSS}
-N 1110 -145 1110 -130 {lab=VSS}
-N 1110 -130 1110 -110 {lab=VSS}
-N 1080 -940 1080 -930 {lab=VDD}
-N 1080 -900 1140 -900 {lab=VDD}
-N 1140 -940 1140 -900 {lab=VDD}
-N 1080 -940 1140 -940 {lab=VDD}
-N 1080 -970 1080 -940 {lab=VDD}
-N 445 -675 465 -675 {lab=vbn}
-N 980 -700 1000 -700 {lab=VNin}
-N 980 -780 1000 -780 {lab=VPin}
-N 445 -705 465 -705 {lab=vbp}
-N 1000 -900 1040 -900 {
-lab=vbp}
-N 780 -1045 780 -820 {lab=VPout}
-N 1320 -1045 1320 -760 {lab=voutp}
-N 1100 -840 1100 -820 {lab=VDD}
-N 1100 -840 1170 -840 {lab=VDD}
-N 1080 -870 1080 -820 {lab=#net2}
-N 760 -640 780 -640 {lab=VNout}
-N 780 -500 1040 -500 {lab=VNout}
-N 760 -820 780 -820 {lab=VPout}
-N 780 -1045 1050 -1045 {lab=VPout}
-N 1200 -760 1320 -760 {lab=voutp}
-N 1200 -720 1320 -720 {lab=voutp}
-N 380 -905 440 -905 {lab=VDD}
-N 380 -875 440 -875 {lab=VSS}
-N 1360 -760 1360 -345 {lab=voutp}
-N 1320 -760 1360 -760 {lab=voutp}
-N 1415 -720 1415 -305 {lab=voutp}
-N 295 -765 295 -745 {lab=VDD}
-N 295 -625 295 -605 {lab=VSS}
-N 1970 -1000 2000 -1000 {
+N 465 -760 465 -700 {lab=VDD}
+N 465 -520 465 -460 {lab=VSS}
+N 910 -965 940 -965 {
 lab=VP}
-N 1910 -1060 1970 -1060 {
+N 850 -1025 910 -1025 {
 lab=VP}
-N 1970 -1060 1970 -1000 {
+N 910 -1025 910 -965 {
 lab=VP}
-N 1930 -1000 1970 -1000 {
+N 870 -965 910 -965 {
 lab=VP}
-N 650 -820 700 -820 {
+N 1180 -965 1350 -965 {
 lab=vp}
-N 2240 -1000 2410 -1000 {
-lab=vp}
-N 1970 -870 2000 -870 {
+N 910 -835 940 -835 {
 lab=VN}
-N 1910 -930 1970 -930 {
+N 850 -895 910 -895 {
 lab=VN}
-N 1970 -930 1970 -870 {
+N 910 -895 910 -835 {
 lab=VN}
-N 1930 -870 1970 -870 {
+N 870 -835 910 -835 {
 lab=VN}
-N 2240 -870 2410 -870 {
+N 1180 -835 1350 -835 {
 lab=vn}
-N 650 -640 700 -640 {
-lab=vn}
-N 2540 -660 2570 -660 {
+N 1480 -625 1510 -625 {
 lab=VOUTP}
-N 2570 -720 2630 -720 {
+N 1510 -685 1570 -685 {
 lab=VOUTP}
-N 2570 -720 2570 -660 {
+N 1510 -685 1510 -625 {
 lab=VOUTP}
-N 2570 -660 2610 -660 {
+N 1510 -625 1550 -625 {
 lab=VOUTP}
-N 2140 -660 2300 -660 {
+N 1080 -625 1240 -625 {
 lab=voutp}
-N 2540 -530 2570 -530 {
+N 1480 -495 1510 -495 {
 lab=VOUTN}
-N 2570 -590 2630 -590 {
+N 1510 -555 1570 -555 {
 lab=VOUTN}
-N 2570 -590 2570 -530 {
+N 1510 -555 1510 -495 {
 lab=VOUTN}
-N 2570 -530 2610 -530 {
+N 1510 -495 1550 -495 {
 lab=VOUTN}
-N 2140 -530 2300 -530 {
+N 1080 -495 1240 -495 {
 lab=voutn}
-N 1415 -720 1580 -720 {
-lab=voutp}
-N 1320 -720 1415 -720 {lab=voutp}
-N 1360 -760 1580 -760 {
-lab=voutp}
-N 1970 -1120 2000 -1120 {
+N 910 -1085 940 -1085 {
 lab=VREF}
-N 1910 -1180 1970 -1180 {
+N 850 -1145 910 -1145 {
 lab=VREF}
-N 1970 -1180 1970 -1120 {
+N 910 -1145 910 -1085 {
 lab=VREF}
-N 1930 -1120 1970 -1120 {
+N 870 -1085 910 -1085 {
 lab=VREF}
-N 2240 -1120 2420 -1120 {
+N 1180 -1085 1360 -1085 {
 lab=vref}
-N 1110 -410 1110 -380 {
-lab=vref}
-N 2280 -350 2300 -350 {
+N 1220 -315 1240 -315 {
 lab=VSS}
-N 2280 -550 2300 -550 {
+N 1220 -515 1240 -515 {
 lab=VSS}
-N 2280 -680 2300 -680 {
+N 1220 -645 1240 -645 {
 lab=VSS}
-N 2140 -510 2300 -510 {
+N 1080 -475 1240 -475 {
 lab=VSS}
-N 2140 -500 2300 -500 {
+N 1080 -465 1240 -465 {
 lab=VDD}
-N 2140 -640 2300 -640 {
+N 1080 -605 1240 -605 {
 lab=VSS}
-N 2140 -630 2300 -630 {
+N 1080 -595 1240 -595 {
 lab=VDD}
-N 2240 -850 2400 -850 {
+N 1180 -815 1340 -815 {
 lab=VSS}
-N 2240 -840 2400 -840 {
+N 1180 -805 1340 -805 {
 lab=VDD}
-N 2240 -980 2400 -980 {
+N 1180 -945 1340 -945 {
 lab=VSS}
-N 2240 -970 2400 -970 {
+N 1180 -935 1340 -935 {
 lab=VDD}
-N 2240 -1100 2400 -1100 {
+N 1180 -1065 1340 -1065 {
 lab=VSS}
-N 2240 -1090 2400 -1090 {
+N 1180 -1055 1340 -1055 {
 lab=VDD}
-N 2240 -890 2280 -890 {
+N 1180 -855 1220 -855 {
 lab=VSS}
-N 2240 -900 2260 -900 {
+N 1180 -865 1200 -865 {
 lab=VDD}
-N 2240 -1020 2280 -1020 {
+N 1180 -985 1220 -985 {
 lab=VSS}
-N 2240 -1030 2260 -1030 {
+N 1180 -995 1200 -995 {
 lab=VDD}
-N 2240 -1140 2280 -1140 {
+N 1180 -1105 1220 -1105 {
 lab=VSS}
-N 2240 -1150 2260 -1150 {
+N 1180 -1115 1200 -1115 {
 lab=VDD}
-N 2260 -360 2300 -360 {
+N 1200 -325 1240 -325 {
 lab=VDD}
-N 2130 -310 2300 -310 {
+N 1070 -275 1240 -275 {
 lab=VSS}
-N 2130 -300 2300 -300 {
+N 1070 -265 1240 -265 {
 lab=VDD}
-N 2280 -550 2280 -350 {
+N 1220 -515 1220 -315 {
 lab=VSS}
-N 2260 -560 2300 -560 {
+N 1200 -525 1240 -525 {
 lab=VDD}
-N 2260 -560 2260 -360 {
+N 1200 -525 1200 -325 {
 lab=VDD}
-N 2260 -690 2260 -560 {
+N 1200 -655 1200 -525 {
 lab=VDD}
-N 2260 -690 2300 -690 {
+N 1200 -655 1240 -655 {
 lab=VDD}
-N 2280 -680 2280 -550 {
+N 1220 -645 1220 -515 {
 lab=VSS}
-N 2260 -900 2260 -690 {
+N 1200 -865 1200 -655 {
 lab=VDD}
-N 2280 -890 2280 -680 {
+N 1220 -855 1220 -645 {
 lab=VSS}
-N 2280 -1020 2280 -890 {
+N 1220 -985 1220 -855 {
 lab=VSS}
-N 2280 -1140 2280 -1020 {
+N 1220 -1105 1220 -985 {
 lab=VSS}
-N 2260 -1030 2260 -900 {
+N 1200 -995 1200 -865 {
 lab=VDD}
-N 2260 -1150 2260 -1030 {
+N 1200 -1115 1200 -995 {
 lab=VDD}
-N 2260 -220 2260 -160 {lab=VDD}
-N 2280 -170 2300 -170 {
+N 1200 -185 1200 -125 {lab=VDD}
+N 1220 -135 1240 -135 {
 lab=VSS}
-N 2280 -210 2280 -170 {lab=VSS}
-N 2260 -160 2300 -160 {
+N 1220 -175 1220 -135 {lab=VSS}
+N 1200 -125 1240 -125 {
 lab=VDD}
-N 2130 -160 2260 -160 {
+N 1070 -125 1200 -125 {
 lab=VDD}
-N 2130 -170 2280 -170 {
+N 1070 -135 1220 -135 {
 lab=VSS}
-N 2280 -210 2300 -210 {lab=VSS}
-N 2280 -350 2280 -210 {lab=VSS}
-N 2260 -220 2300 -220 {lab=VDD}
-N 2260 -360 2260 -220 {lab=VDD}
-C {lab_wire.sym} 1170 -840 2 0 {name=p10 sig_type=std_logic lab=VDD}
-C {OTA_Telescopic_CMFB.sym} 1120 -325 0 1 {name=x2}
-C {sg13g2_pr/sg13_lv_pmos.sym} 1060 -900 0 0 {name=M3
-l=2.5u
-w=12u
-ng=2
-m=1
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {lab_wire.sym} 1080 -970 0 0 {name=p15 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 295 -765 0 1 {name=p2 sig_type=std_logic lab=VDD}
-C {sg13g2_pr/sg13_lv_nmos.sym} 1090 -175 0 0 {name=M2
-l=6.5u
-w=12.5u
-ng=2
-m=1
-model=sg13_lv_nmos
-spiceprefix=X
-}
-C {lab_wire.sym} 1030 -175 0 0 {name=p13 sig_type=std_logic lab=vbn}
-C {lab_wire.sym} 465 -675 0 1 {name=p16 sig_type=std_logic lab=vbn}
-C {lab_wire.sym} 1100 -640 2 0 {name=p1 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 1060 -255 2 0 {name=p4 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 1110 -110 2 0 {name=p17 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 295 -605 2 0 {name=p20 sig_type=std_logic lab=VSS}
-C {ipin.sym} 980 -780 0 0 {name=p6 lab=VPin}
-C {ipin.sym} 980 -700 0 0 {name=p9 lab=VNin}
-C {iopin.sym} 380 -905 2 0 {name=p19 lab=VDD}
-C {iopin.sym} 380 -875 2 0 {name=p23 lab=VSS}
-C {lab_wire.sym} 465 -705 0 1 {name=p24 sig_type=std_logic lab=vbp}
-C {lab_wire.sym} 1000 -900 0 0 {name=p25 sig_type=std_logic lab=vbp}
-C {ipin.sym} 1080 -600 0 0 {name=p3 lab=CMFBin}
-C {opin.sym} 920 -325 2 0 {name=p14 lab=CMFBout}
-C {sg13g2_pr/rppd.sym} 730 -640 1 0 {name=R3
-w=0.6e-6
-l=6.73e-6
-model=rppd
-body=VSS
-spiceprefix=X
-b=0
-m=1
-}
-C {sg13g2_pr/rppd.sym} 730 -820 3 0 {name=R4
-w=0.6e-6
-l=6.73e-6
-model=rppd
-body=VSS
-spiceprefix=X
-b=0
-m=1
-}
-C {sg13g2_pr/rppd.sym} 1080 -1045 3 0 {name=R5
-w=0.6e-6
-l=15.4e-6
-model=rppd
-body=VSS
-spiceprefix=X
-b=0
-m=1
-}
-C {sg13g2_pr/rppd.sym} 1070 -500 3 0 {name=R2
-w=0.6e-6
-l=15.4e-6
-model=rppd
-body=VSS
-spiceprefix=X
-b=0
-m=1
-}
-C {OTA_Telescopic_currentRef.sym} 295 -685 0 0 {name=x3}
-C {sg13g2_pr/annotate_fet_params.sym} 1215 -995 0 0 {name=annot1 ref=M3}
-C {sg13g2_pr/annotate_fet_params.sym} 1235 -220 0 0 {name=annot2 ref=M2}
-C {ipin.sym} 1915 -1060 0 0 {name=p26 lab=VP}
-C {sg13g2_pr/bondpad.sym} 1890 -1000 3 0 {name=X5
+N 1220 -175 1240 -175 {lab=VSS}
+N 1220 -315 1220 -175 {lab=VSS}
+N 1200 -185 1240 -185 {lab=VDD}
+N 1200 -325 1200 -185 {lab=VDD}
+N 615 -620 665 -620 {lab=voutp}
+N 615 -600 665 -600 {lab=voutn}
+N 275 -670 315 -670 {lab=vp}
+N 275 -550 315 -550 {lab=vn}
+N 235 -650 315 -650 {lab=VPout}
+N 235 -570 315 -570 {lab=VNout}
+N 235 -630 315 -630 {lab=VPin}
+N 235 -590 315 -590 {lab=VNin}
+N 555 -520 555 -460 {lab=CMFBout}
+N 510 -520 510 -460 {lab=CMFBin}
+N 430 -760 430 -700 {lab=vref}
+C {ipin.sym} 235 -630 0 0 {name=p6 lab=VPin}
+C {ipin.sym} 235 -590 0 0 {name=p9 lab=VNin}
+C {iopin.sym} 465 -760 3 0 {name=p19 lab=VDD}
+C {iopin.sym} 465 -460 1 0 {name=p23 lab=VSS}
+C {ipin.sym} 510 -460 3 0 {name=p3 lab=CMFBin}
+C {opin.sym} 555 -460 1 0 {name=p14 lab=CMFBout}
+C {ipin.sym} 855 -1025 0 0 {name=p26 lab=VP}
+C {sg13g2_pr/bondpad.sym} 830 -965 3 0 {name=X5
 model=bondpad
 spiceprefix=X
 size=80u
 shape=0
 padtype=0
 }
-C {lab_wire.sym} 650 -820 0 0 {name=p27 sig_type=std_logic lab=vp}
-C {lab_wire.sym} 2410 -1000 0 1 {name=p28 sig_type=std_logic lab=vp}
-C {ipin.sym} 1915 -930 0 0 {name=p21 lab=VN}
-C {sg13g2_pr/bondpad.sym} 1890 -870 3 0 {name=X7
+C {lab_wire.sym} 1350 -965 0 1 {name=p28 sig_type=std_logic lab=vp}
+C {ipin.sym} 855 -895 0 0 {name=p21 lab=VN}
+C {sg13g2_pr/bondpad.sym} 830 -835 3 0 {name=X7
 model=bondpad
 spiceprefix=X
 size=80u
 shape=0
 padtype=0
 }
-C {lab_wire.sym} 2410 -870 0 1 {name=p29 sig_type=std_logic lab=vn}
-C {lab_wire.sym} 650 -640 0 0 {name=p7 sig_type=std_logic lab=vn}
-C {sg13g2_pr/bondpad.sym} 2650 -660 1 1 {name=X9
+C {lab_wire.sym} 1350 -835 0 1 {name=p29 sig_type=std_logic lab=vn}
+C {sg13g2_pr/bondpad.sym} 1590 -625 1 1 {name=X9
 model=bondpad
 spiceprefix=X
 size=80u
 shape=0
 padtype=0
 }
-C {lab_wire.sym} 2140 -660 0 0 {name=p31 sig_type=std_logic lab=voutp}
-C {sg13g2_pr/bondpad.sym} 2650 -530 1 1 {name=X11
+C {lab_wire.sym} 1080 -625 0 0 {name=p31 sig_type=std_logic lab=voutp}
+C {sg13g2_pr/bondpad.sym} 1590 -495 1 1 {name=X11
 model=bondpad
 spiceprefix=X
 size=80u
 shape=0
 padtype=0
 }
-C {opin.sym} 2625 -720 0 0 {name=p8 lab=VOUTP}
-C {opin.sym} 2625 -590 0 0 {name=p22 lab=VOUTN}
-C {lab_wire.sym} 1580 -720 0 1 {name=p30 sig_type=std_logic lab=voutn}
-C {lab_wire.sym} 1580 -760 0 1 {name=p33 sig_type=std_logic lab=voutp}
-C {lab_wire.sym} 2140 -530 0 0 {name=p37 sig_type=std_logic lab=voutn}
-C {opin.sym} 800 -820 0 0 {name=p12 lab=VPout}
-C {opin.sym} 800 -640 0 0 {name=p18 lab=VNout}
-C {sg13g2_pr/bondpad.sym} 1890 -1120 3 0 {name=X13
+C {opin.sym} 1565 -685 0 0 {name=p8 lab=VOUTP}
+C {opin.sym} 1565 -555 0 0 {name=p22 lab=VOUTN}
+C {lab_wire.sym} 665 -600 0 1 {name=p30 sig_type=std_logic lab=voutn}
+C {lab_wire.sym} 665 -620 0 1 {name=p33 sig_type=std_logic lab=voutp}
+C {lab_wire.sym} 1080 -495 0 0 {name=p37 sig_type=std_logic lab=voutn}
+C {opin.sym} 235 -650 2 0 {name=p12 lab=VPout}
+C {opin.sym} 235 -570 2 0 {name=p18 lab=VNout}
+C {sg13g2_pr/bondpad.sym} 830 -1085 3 0 {name=X13
 model=bondpad
 spiceprefix=X
 size=80u
 shape=0
 padtype=0
 }
-C {lab_wire.sym} 2420 -1120 0 1 {name=p34 sig_type=std_logic lab=vref}
-C {lab_wire.sym} 1110 -410 0 0 {name=p11 sig_type=std_logic lab=vref}
-C {lab_wire.sym} 1060 -405 0 0 {name=p5 sig_type=std_logic lab=VDD}
-C {OTA_Telescopic_core.sym} 1080 -740 0 0 {name=x14}
-C {IOCells/sg13g2_IOPadAnalog.sym} 2120 -1120 0 1 {name=x1}
-C {IOCells/sg13g2_IOPadAnalog.sym} 2120 -1000 0 1 {name=x4}
-C {IOCells/sg13g2_IOPadAnalog.sym} 2120 -870 0 1 {name=x6}
-C {IOCells/sg13g2_IOPadAnalog.sym} 2420 -660 0 0 {name=x8}
-C {IOCells/sg13g2_IOPadAnalog.sym} 2420 -530 0 0 {name=x10}
-C {lab_wire.sym} 2130 -310 0 0 {name=p42 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2130 -300 2 1 {name=p43 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2140 -510 0 0 {name=p48 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2140 -500 2 1 {name=p49 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2140 -640 0 0 {name=p50 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2140 -630 2 1 {name=p51 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2400 -850 0 1 {name=p52 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2400 -840 2 0 {name=p53 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2400 -980 0 1 {name=p54 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2400 -970 2 0 {name=p55 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 2400 -1100 0 1 {name=p56 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2400 -1090 2 0 {name=p57 sig_type=std_logic lab=VDD}
-C {sg13g2_IOPadIOVdd.sym} 2420 -330 0 0 {name=x15}
-C {sg13g2_IOPadIOVss.sym} 2420 -190 0 0 {name=x12}
-C {lab_wire.sym} 2130 -170 0 0 {name=p32 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2130 -160 2 1 {name=p36 sig_type=std_logic lab=VDD}
-C {iopin.sym} 1910 -1180 0 1 {name=p35 lab=VREF}
+C {lab_wire.sym} 1360 -1085 0 1 {name=p34 sig_type=std_logic lab=vref}
+C {lab_wire.sym} 430 -760 0 0 {name=p11 sig_type=std_logic lab=vref}
+C {IOCells/sg13g2_IOPadAnalog.sym} 1060 -1085 0 1 {name=x1}
+C {IOCells/sg13g2_IOPadAnalog.sym} 1060 -965 0 1 {name=x4}
+C {IOCells/sg13g2_IOPadAnalog.sym} 1060 -835 0 1 {name=x6}
+C {IOCells/sg13g2_IOPadAnalog.sym} 1360 -625 0 0 {name=x8}
+C {IOCells/sg13g2_IOPadAnalog.sym} 1360 -495 0 0 {name=x10}
+C {lab_wire.sym} 1070 -275 0 0 {name=p42 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1070 -265 2 1 {name=p43 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1080 -475 0 0 {name=p48 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1080 -465 2 1 {name=p49 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1080 -605 0 0 {name=p50 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1080 -595 2 1 {name=p51 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1340 -815 0 1 {name=p52 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1340 -805 2 0 {name=p53 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1340 -945 0 1 {name=p54 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1340 -935 2 0 {name=p55 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1340 -1065 0 1 {name=p56 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1340 -1055 2 0 {name=p57 sig_type=std_logic lab=VDD}
+C {sg13g2_IOPadIOVdd.sym} 1360 -295 0 0 {name=x15}
+C {sg13g2_IOPadIOVss.sym} 1360 -155 0 0 {name=x12}
+C {lab_wire.sym} 1070 -135 0 0 {name=p32 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1070 -125 2 1 {name=p36 sig_type=std_logic lab=VDD}
+C {iopin.sym} 850 -1145 0 1 {name=p35 lab=VREF}
+C {OTA_Telescopic_TOP_wp.sym} 465 -610 0 0 {name=x16}
+C {lab_wire.sym} 275 -670 0 0 {name=p38 sig_type=std_logic lab=vp}
+C {lab_wire.sym} 275 -550 0 0 {name=p39 sig_type=std_logic lab=vn}

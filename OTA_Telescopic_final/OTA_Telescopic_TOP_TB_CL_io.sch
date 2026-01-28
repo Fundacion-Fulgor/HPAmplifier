@@ -321,8 +321,8 @@ let Vout2 = v(Vout2)
 let Vin = v(VP)-v(VN)
 
 let Vout = v(Vout1)-v(Vout2)
-wrdata Vout_tt_400_io.txt Vout
-wrdata Vin_tt_400_io.txt Vin
+*wrdata Vout_tt_400_io.txt Vout
+*wrdata Vin_tt_400_io.txt Vin
 
 plot Vin Vout
 plot Vout1 Vout2

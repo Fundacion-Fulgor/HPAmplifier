@@ -5,77 +5,76 @@ V {}
 S {}
 F {}
 E {}
-T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} -860 360 0 0 0.4 0.4 {}
-N -350 190 -350 210 {lab=GND}
-N 170 120 170 150 {lab=GND}
-N 270 120 270 150 {lab=GND}
-N 270 -20 270 60 {lab=Vout2}
-N 80 -40 170 -40 {lab=Vout1}
-N 170 -40 170 60 {lab=Vout1}
-N 80 -20 270 -20 {lab=Vout2}
-N -70 60 -70 70 {lab=GND}
-N -105 -140 -105 -120 {lab=VREF}
-N -70 -140 -70 -120 {lab=VDD}
-N -780 275 -780 295 {lab=GND}
-N -780 155 -780 215 {lab=VDD}
-N -350 25 -350 130 {lab=#net1}
-N -350 -90 -220 -90 {lab=#net1}
-N -350 25 -220 25 {lab=#net1}
-N -315 -15 -220 -15 {lab=#net1}
-N -315 -15 -315 5 {lab=#net1}
-N -315 5 -305 5 {lab=#net1}
-N -245 5 -220 5 {lab=#net2}
-N -245 -70 -220 -70 {lab=#net3}
-N -315 -70 -315 -50 {lab=#net4}
-N -315 -50 -220 -50 {lab=#net4}
-N -350 5 -350 25 {lab=#net1}
-N -420 -70 -420 -60 {lab=#net4}
-N -315 -70 -305 -70 {lab=#net4}
-N -420 -70 -315 -70 {lab=#net4}
-N -420 -0 -420 5 {lab=#net1}
-N -420 5 -350 5 {lab=#net1}
-N -350 -90 -350 5 {lab=#net1}
-N -350 5 -315 5 {lab=#net1}
-N -700 275 -700 295 {lab=GND}
-N -700 155 -700 215 {lab=VREF}
-N -25 60 20 60 {lab=#net5}
-C {vsource.sym} -350 160 0 0 {name=V7 value=1.25 savecurrent=false}
-C {gnd.sym} -350 210 0 0 {name=l5 lab=GND}
-C {capa-2.sym} 170 90 0 0 {name=C1
+T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} 160 -100 0 0 0.4 0.4 {}
+N 670 -270 670 -250 {lab=GND}
+N 1190 -340 1190 -310 {lab=GND}
+N 1290 -340 1290 -310 {lab=GND}
+N 1290 -480 1290 -400 {lab=Vout2}
+N 1100 -500 1190 -500 {lab=Vout1}
+N 1190 -500 1190 -400 {lab=Vout1}
+N 1100 -480 1290 -480 {lab=Vout2}
+N 950 -400 950 -390 {lab=GND}
+N 915 -600 915 -580 {lab=VREF}
+N 950 -600 950 -580 {lab=VDD}
+N 240 -185 240 -165 {lab=GND}
+N 240 -305 240 -245 {lab=VDD}
+N 670 -430 670 -330 {lab=#net1}
+N 670 -550 800 -550 {lab=#net1}
+N 670 -430 800 -430 {lab=#net1}
+N 705 -470 800 -470 {lab=#net1}
+N 705 -470 705 -450 {lab=#net1}
+N 705 -450 715 -450 {lab=#net1}
+N 775 -450 800 -450 {lab=#net2}
+N 775 -530 800 -530 {lab=#net3}
+N 705 -530 705 -510 {lab=#net4}
+N 705 -510 800 -510 {lab=#net4}
+N 600 -530 600 -520 {lab=#net4}
+N 705 -530 715 -530 {lab=#net4}
+N 600 -530 705 -530 {lab=#net4}
+N 600 -460 600 -450 {lab=#net1}
+N 600 -450 670 -450 {lab=#net1}
+N 670 -550 670 -450 {lab=#net1}
+N 670 -450 705 -450 {lab=#net1}
+N 320 -185 320 -165 {lab=GND}
+N 320 -305 320 -245 {lab=VREF}
+N 995 -400 1040 -400 {lab=#net5}
+N 670 -450 670 -430 {lab=#net1}
+C {vsource.sym} 670 -300 0 0 {name=V7 value=1.25 savecurrent=false}
+C {gnd.sym} 670 -250 0 0 {name=l5 lab=GND}
+C {capa-2.sym} 1190 -370 0 0 {name=C1
 m=1
 value=500f
 footprint=1206
 device=polarized_capacitor}
-C {gnd.sym} 170 150 0 0 {name=l10 lab=GND}
-C {capa-2.sym} 270 90 0 0 {name=C2
+C {gnd.sym} 1190 -310 0 0 {name=l10 lab=GND}
+C {capa-2.sym} 1290 -370 0 0 {name=C2
 m=1
 value=500f
 footprint=1206
 device=polarized_capacitor}
-C {gnd.sym} 270 150 0 0 {name=l7 lab=GND}
-C {lab_wire.sym} 270 -20 0 0 {name=p19 sig_type=std_logic lab=Vout2}
-C {lab_wire.sym} 170 20 0 0 {name=p18 sig_type=std_logic lab=Vout1}
-C {OTA_Telescopic_TOP.sym} -70 -30 0 0 {name=x1}
-C {gnd.sym} -70 70 0 0 {name=l1 lab=GND}
-C {lab_wire.sym} -105 -140 0 0 {name=p2 sig_type=std_logic lab=VREF}
-C {lab_wire.sym} -70 -140 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {vsource.sym} -780 245 0 0 {name=V6 value=1.62 savecurrent=false}
-C {gnd.sym} -780 295 0 0 {name=l8 lab=GND}
-C {lab_wire.sym} -780 155 0 0 {name=p5 sig_type=std_logic lab=VDD}
-C {res.sym} -275 -70 1 0 {name=R3
+C {gnd.sym} 1290 -310 0 0 {name=l7 lab=GND}
+C {lab_wire.sym} 1290 -480 0 0 {name=p19 sig_type=std_logic lab=Vout2}
+C {lab_wire.sym} 1190 -440 0 0 {name=p18 sig_type=std_logic lab=Vout1}
+C {gnd.sym} 950 -390 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} 915 -600 0 0 {name=p2 sig_type=std_logic lab=VREF}
+C {lab_wire.sym} 950 -600 0 0 {name=p3 sig_type=std_logic lab=VDD}
+C {vsource.sym} 240 -215 0 0 {name=V6 value=1.62 savecurrent=false}
+C {gnd.sym} 240 -165 0 0 {name=l8 lab=GND}
+C {lab_wire.sym} 240 -305 0 0 {name=p5 sig_type=std_logic lab=VDD}
+C {res.sym} 745 -530 1 0 {name=R3
 value=10G
 footprint=1206
 device=resistor
 m=1
 }
-C {res.sym} -275 5 1 0 {name=R4
+C {res.sym} 745 -450 1 0 {name=R4
 value=10G
 footprint=1206
 device=resistor
 m=1
 }
-C {vsource.sym} -420 -30 0 0 {name=V1 value="0 AC 1" savecurrent=false}
-C {devices/code.sym} -795 -350.390625 0 0 {name=TT_MODELS
+C {vsource.sym} 600 -490 0 0 {name=V1 value="0 AC 1" savecurrent=false}
+C {devices/code.sym} 225 -810.390625 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -86,7 +85,7 @@ value="
 .temp 125
 "
 spice_ignore=false}
-C {code.sym} -795 -200 0 0 {name=AC only_toplevel=true value="
+C {code.sym} 225 -660 0 0 {name=AC only_toplevel=true value="
 .control
 save all
  set color0 = white
@@ -144,7 +143,7 @@ print onoise_total
 .endc
 "
 }
-C {devices/launcher.sym} -765 -20 0 0 {name=h3
+C {devices/launcher.sym} 255 -480 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
 value="
@@ -171,7 +170,7 @@ print sqrt(@n.xm1.nsg13_lv_nmos[sfl])
 print sqrt(@n.xm1.nsg13_lv_nmos[sid])
 .endc
 "}
-C {code.sym} -905 -200 0 0 {name=NGSPICE
+C {code.sym} 115 -660 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 
@@ -187,10 +186,10 @@ plot v(VREF)
 .endc
 "
 spice_ignore=true}
-C {vsource.sym} -700 245 0 0 {name=V2 value="dc 0.9 pwl(0 0.8 1u 0.8 1.01u 0.9 0.15m 0.9 0.15m 0)" savecurrent=false}
-C {gnd.sym} -700 295 0 0 {name=l4 lab=GND}
-C {lab_wire.sym} -700 155 0 0 {name=p4 sig_type=std_logic lab=VREF}
-C {code.sym} -660 -195 0 0 {name=save only_toplevel=false value="
+C {vsource.sym} 320 -215 0 0 {name=V2 value="dc 0.9 pwl(0 0.8 1u 0.8 1.01u 0.9 0.15m 0.9 0.15m 0)" savecurrent=false}
+C {gnd.sym} 320 -165 0 0 {name=l4 lab=GND}
+C {lab_wire.sym} 320 -305 0 0 {name=p4 sig_type=std_logic lab=VREF}
+C {code.sym} 360 -655 0 0 {name=save only_toplevel=false value="
 .op
 
 .save all
@@ -313,3 +312,4 @@ print x2_vth_M0
 
 "
 spice_ignore=true}
+C {OTA_Telescopic_TOP_wp.sym} 950 -490 0 0 {name=x2}
