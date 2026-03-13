@@ -44,7 +44,7 @@ N -670 155 -610 155 {lab=sub!}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
 C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
-C {vsource.sym} -885 195 0 0 {name=V1 value=1.8 savecurrent=false}
+C {vsource.sym} -885 195 0 0 {name=V1 value=\{VDD\}  savecurrent=false}
 C {gnd.sym} -885 245 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -885 105 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -765 195 0 0 {name=V2 value=0.9 savecurrent=false}
@@ -66,21 +66,22 @@ C {lab_wire.sym} 260 -80 0 0 {name=p19 sig_type=std_logic lab=Vout2}
 C {lab_wire.sym} 160 -40 0 0 {name=p18 sig_type=std_logic lab=Vout1}
 C {devices/code.sym} -990 -250.390625 0 0 {name=TT_MODELS
 only_toplevel=true
-format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_tt
+.lib cornerMOSlv.lib mos_$PROCESS
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 65
+.temp $TEMP
 "}
 C {code.sym} -860 -250 0 0 {name=AC only_toplevel=true value="
+
+.nodeset v(Vout1)=0.9 v(Vout2)=0.9
+.param VDD=$VDD
 .control
-save all
- set color0 = white
+save Vout1 Vout2
 
 * AC simulation
-ac dec 1000 1 1T
+ac dec 10 1 1T
 let Av = db(v(Vout1)-v(Vout2))
 meas ac Ao FIND Av WHEN frequency=10
 let ABW = Ao-3
@@ -103,19 +104,18 @@ plot Av
 plot phase_vec
 
 write AC_OL.raw
-wrdata AvCL_ Av
+wrdata AvCL.txt Av
 
-*DC simulation
+let Ao_ = Ao
+let BW_ = BW
 
-op
-let vout_dc = v(Vout1)
-print vout_dc
-write OTA_Telescopic_TOP_TB_CL.raw
+echo "Ao" $&Ao_ >> results.txt
+echo "BW" $&BW_ >> results.txt
 
 .endc
 "
 
-spice_ignore=true}
+spice_ignore=false}
 C {devices/launcher.sym} -530 -250 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
@@ -345,5 +345,5 @@ print onoise_total
 
 .endc
 "
-}
-C {code_shown.sym} -640 -370 0 0 {name=s1 only_toplevel=false value=".inc ../../Layout_and_Related_files/pex/OTA_Telescopic_TOP_wp.spice"}
+spice_ignore=true}
+C {code_shown.sym} -600 -390 0 0 {name=s1 only_toplevel=false value=".inc ../../../../../Layout_and_Related_files/pex/OTA_Telescopic_TOP_wp.spice"}

@@ -100,7 +100,7 @@ C {lab_wire.sym} 485 40 0 0 {name=p18 sig_type=std_logic lab=Vout1}
 C {gnd.sym} 245 90 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 210 -120 0 0 {name=p2 sig_type=std_logic lab=VREF}
 C {lab_wire.sym} 245 -120 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {vsource.sym} -275 265 0 0 {name=V6 value=1.8 savecurrent=false}
+C {vsource.sym} -275 265 0 0 {name=V6 value=\{VDD\} savecurrent=false}
 C {gnd.sym} -275 315 0 0 {name=l8 lab=GND}
 C {lab_wire.sym} -275 175 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {vsource.sym} -185 265 0 0 {name=V8 value=0.9 savecurrent=false}
@@ -108,13 +108,12 @@ C {gnd.sym} -185 315 0 0 {name=l9 lab=GND}
 C {lab_wire.sym} -185 175 0 0 {name=p6 sig_type=std_logic lab=VREF}
 C {devices/code.sym} -335 -320.390625 0 0 {name=TT_MODELS1
 only_toplevel=true
-format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_tt
+.lib cornerMOSlv.lib mos_$PROCESS
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 65
+.temp $TEMP
 "
 }
 C {devices/launcher.sym} -195 -400 0 0 {name=h1
@@ -269,19 +268,12 @@ C {devices/gnd.sym} 1105 305 0 0 {name=l21 lab=GND}
 C {code.sym} -205 -180 0 0 {name=STB
 only_toplevel=true
 value="
-
+.nodeset v(Vout1)=0.9 v(Vout2)=0.9
 .options savecurrents reltol=1e-3 abstol=1e-12 gmin=1e-15
+.param VDD=$VDD
 .control
-save all
+save VN VP Vout1 Vout2 vr1 vf1 vir1 vif1
 set color0 = white
-
-* Operating Point Analysis
-op
-remzerovec
-let cgg_M0 = @m.x1.xm0.msky130_fd_pr__nfet_01v8_lvt[cgg]
-print cgg_M0
-write OTA_Telescopic_TOP_TB_CMFB.raw
-set appendwrite
 
 * AC Analysis
 ac dec 10 1 5G
@@ -317,8 +309,13 @@ plot phase_vec ylabel 'Phase - Middlebrook'
 
 write Middlebrook_.raw
 
-wrdata STB_Av_ Av
-wrdata STB_ph_ phase_vec
+wrdata CMFB_Av.txt Av
+wrdata CMFB_Phase.txt phase_vec
+let A0_ = Ao
+
+echo "PM" $&PM > results.txt
+echo "A0" $&A0_ >> results.txt
+
 
 *quit
 
@@ -385,4 +382,4 @@ C {code_shown.sym} -550 -510 0 0 {name=IOCells models only_toplevel=false value=
 "}
 C {OTA_Telescopic_TOP_IOCells.sym} 245 -10 0 0 {name=x1}
 C {OTA_Telescopic_TOP_IOCells.sym} 1040 -5 0 0 {name=x2}
-C {code_shown.sym} -220 -490 0 0 {name=s1 only_toplevel=false value=".inc ../../Layout_and_Related_files/pex/OTA_Telescopic_TOP_wp.spice"}
+C {code_shown.sym} 80 -540 0 0 {name=s1 only_toplevel=false value=".inc ../../../../../Layout_and_Related_files/pex/OTA_Telescopic_TOP_wp.spice"}

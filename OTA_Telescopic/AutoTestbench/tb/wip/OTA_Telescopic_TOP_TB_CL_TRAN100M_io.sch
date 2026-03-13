@@ -1,9 +1,9 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.4 file_version=1.2
+}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} -1015 390 0 0 0.4 0.4 {}
 N -450 140 -450 220 {lab=#net1}
@@ -43,8 +43,8 @@ N -670 155 -670 170 {lab=sub!}
 N -670 155 -610 155 {lab=sub!}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
-C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
-C {vsource.sym} -885 195 0 0 {name=V1 value=1.8 savecurrent=false}
+C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 100000000) AC 0.5" savecurrent=false}
+C {vsource.sym} -885 195 0 0 {name=V1 value=\{VDD\} savecurrent=false}
 C {gnd.sym} -885 245 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -885 105 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -765 195 0 0 {name=V2 value=0.9 savecurrent=false}
@@ -66,21 +66,22 @@ C {lab_wire.sym} 260 -80 0 0 {name=p19 sig_type=std_logic lab=Vout2}
 C {lab_wire.sym} 160 -40 0 0 {name=p18 sig_type=std_logic lab=Vout1}
 C {devices/code.sym} -990 -250.390625 0 0 {name=TT_MODELS
 only_toplevel=true
-format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_tt
+.lib cornerMOSlv.lib mos_$PROCESS
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 65
+.temp $TEMP
 "}
 C {code.sym} -860 -250 0 0 {name=AC only_toplevel=true value="
+.param VDD=$VDD
+
 .control
 save all
  set color0 = white
 
 * AC simulation
-ac dec 1000 1 1T
+ac dec 10 1 1T
 let Av = db(v(Vout1)-v(Vout2))
 meas ac Ao FIND Av WHEN frequency=10
 let ABW = Ao-3
@@ -103,14 +104,19 @@ plot Av
 plot phase_vec
 
 write AC_OL.raw
-wrdata AvCL_ Av
+wrdata AvCL.txt Av
+let Ao_ = Ao
+let BW_ = BW
+echo "BW" $&BW_ > results.txt
+echo "A0" $&Ao_ >> results.txt
+
 
 *DC simulation
 
-op
-let vout_dc = v(Vout1)
-print vout_dc
-write OTA_Telescopic_TOP_TB_CL.raw
+*op
+*let vout_dc = v(Vout1)
+*print vout_dc
+*write OTA_Telescopic_TOP_TB_CL.raw
 
 .endc
 "
@@ -268,7 +274,7 @@ print x2_vth_M0
 spice_ignore=true}
 C {lab_wire.sym} -370 -150 0 0 {name=p7 sig_type=std_logic lab=VP}
 C {lab_wire.sym} -310 -35 0 0 {name=p8 sig_type=std_logic lab=VN}
-C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
+C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 100000000) AC 0.5" savecurrent=false}
 C {code.sym} -740 -100 0 0 {name=STEP
 only_toplevel=true
 value="
@@ -305,8 +311,10 @@ C {gnd.sym} -670 245 0 0 {name=l6 lab=GND}
 C {code.sym} -860 -110 0 0 {name=TRAN
 only_toplevel=true
 value="
-
+.param VDD=$VDD
+.nodeset v(Vout1)=0.9 v(Vout2)=0.9
 .control
+save VP VN Vout1 Vout2
  set color0 = white
 
 set wr_singlescale
@@ -321,8 +329,8 @@ let Vout2 = v(Vout2)
 let Vin = v(VP)-v(VN)
 
 let Vout = v(Vout1)-v(Vout2)
-*wrdata Vout_tt_400_io.txt Vout
-*wrdata Vin_tt_400_io.txt Vin
+wrdata Vout_100_io.txt Vout
+wrdata Vin_100_io.txt Vin
 
 plot Vin Vout
 plot Vout1 Vout2
@@ -334,16 +342,16 @@ let Vo2 = v(x1.Vo2)
 
 let Vo = Vo1-Vo2
 
-wrdata Vo Vo
+*wrdata Vo Vo
 
-reset    
-noise v(Vout1) V5 dec 100 1 0.5e9 1
-setplot noise1
+*reset    
+*noise v(Vout1) V5 dec 100 1 0.5e9 1
+*setplot noise1
 *plot onoise_spectrum
-setplot noise2
-print onoise_total
+*setplot noise2
+*print onoise_total
 
 .endc
 "
+spice_ignore=false
 }
-C {code_shown.sym} -640 -370 0 0 {name=s1 only_toplevel=false value=".inc ../../Layout_and_Related_files/pex/OTA_Telescopic_TOP_wp.spice"}
