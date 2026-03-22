@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
@@ -79,14 +79,37 @@ N 140 -95 185 -95 {lab=VSS}
 N 140 -110 140 -95 {lab=VSS}
 N 140 -95 140 50 {lab=VSS}
 N -250 -140 100 -140 {lab=#net1}
-N -60 -340 100 -340 {lab=#net2}
+N 80 -340 100 -340 {lab=#net2}
 N 140 -520 140 -380 {lab=VDD}
 N -50 -520 140 -520 {lab=VDD}
 N -10 50 140 50 {lab=VSS}
-N 140 -190 245 -190 {lab=VDD}
+N 140 -190 245 -190 {lab=I_N}
 N 140 -290 245 -290 {lab=I_P}
-N 140 -190 140 -170 {lab=VDD}
+N 140 -190 140 -170 {lab=I_N}
 N 140 -310 140 -290 {lab=I_P}
+N 370 -380 370 -370 {lab=VDD}
+N 370 -340 430 -340 {lab=VDD}
+N 430 -380 430 -340 {lab=VDD}
+N 370 -380 430 -380 {lab=VDD}
+N 370 -290 475 -290 {lab=I_P2}
+N 370 -310 370 -290 {lab=I_P2}
+N 370 -520 370 -380 {lab=VDD}
+N 140 -520 370 -520 {lab=VDD}
+N 300 -340 330 -340 {lab=#net2}
+N 300 -340 300 -240 {lab=#net2}
+N 80 -240 300 -240 {lab=#net2}
+N 80 -340 80 -240 {lab=#net2}
+N -60 -340 80 -340 {lab=#net2}
+N 610 -380 610 -370 {lab=VDD}
+N 610 -340 670 -340 {lab=VDD}
+N 670 -380 670 -340 {lab=VDD}
+N 610 -380 670 -380 {lab=VDD}
+N 610 -290 715 -290 {lab=I_P3}
+N 610 -310 610 -290 {lab=I_P3}
+N 300 -240 570 -240 {lab=#net2}
+N 570 -340 570 -240 {lab=#net2}
+N 610 -520 610 -380 {lab=VDD}
+N 370 -520 610 -520 {lab=VDD}
 C {sg13g2_pr/sg13_lv_pmos.sym} -80 -380 0 0 {name=M3
 l=2.5u
 w=12u
@@ -157,3 +180,21 @@ spiceprefix=X
 }
 C {iopin.sym} 245 -290 0 0 {name=p3 lab=I_P}
 C {iopin.sym} 245 -190 0 0 {name=p5 lab=I_N}
+C {sg13g2_pr/sg13_lv_pmos.sym} 350 -340 0 0 {name=M8
+l=2.5u
+w=12u
+ng=2
+m=1
+model=sg13_lv_pmos
+spiceprefix=X
+}
+C {iopin.sym} 475 -290 0 0 {name=p6 lab=I_P2}
+C {sg13g2_pr/sg13_lv_pmos.sym} 590 -340 0 0 {name=M9
+l=2.5u
+w=12u
+ng=2
+m=1
+model=sg13_lv_pmos
+spiceprefix=X
+}
+C {iopin.sym} 715 -290 0 0 {name=p7 lab=I_P3}

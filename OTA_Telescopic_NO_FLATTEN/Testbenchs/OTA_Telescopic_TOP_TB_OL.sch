@@ -7,12 +7,10 @@ F {}
 E {}
 T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} 160 -100 0 0 0.4 0.4 {}
 N 670 -270 670 -250 {lab=GND}
-N 1190 -340 1190 -310 {lab=GND}
-N 1290 -340 1290 -310 {lab=GND}
-N 1290 -480 1290 -400 {lab=Vout2}
-N 1100 -500 1190 -500 {lab=Vout1}
-N 1190 -500 1190 -400 {lab=Vout1}
-N 1100 -480 1290 -480 {lab=Vout2}
+N 1390 -340 1390 -310 {lab=GND}
+N 1390 -420 1390 -400 {lab=Vout2}
+N 1100 -500 1590 -500 {lab=Vout1}
+N 1100 -480 1390 -480 {lab=Vout2}
 N 950 -400 950 -390 {lab=GND}
 N 915 -600 915 -580 {lab=VREF}
 N 950 -600 950 -580 {lab=VDD}
@@ -39,26 +37,33 @@ N 320 -185 320 -165 {lab=GND}
 N 320 -305 320 -245 {lab=VREF}
 N 995 -400 1040 -400 {lab=#net5}
 N 670 -450 670 -430 {lab=#net1}
+N 1470 -340 1470 -310 {lab=GND}
+N 1470 -420 1470 -400 {lab=Vout2}
+N 1390 -420 1470 -420 {lab=Vout2}
+N 1390 -480 1390 -420 {lab=Vout2}
+N 1590 -360 1590 -330 {lab=GND}
+N 1590 -440 1590 -420 {lab=Vout1}
+N 1670 -360 1670 -330 {lab=GND}
+N 1670 -440 1670 -420 {lab=Vout1}
+N 1590 -440 1670 -440 {lab=Vout1}
+N 1590 -500 1590 -440 {lab=Vout1}
+N 1100 -540 1160 -540 {lab=Vop}
+N 1100 -520 1160 -520 {lab=Von}
 C {vsource.sym} 670 -300 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} 670 -250 0 0 {name=l5 lab=GND}
-C {capa-2.sym} 1190 -370 0 0 {name=C1
+C {capa-2.sym} 1390 -370 0 0 {name=C2
 m=1
-value=500f
+value=25p
 footprint=1206
-device=polarized_capacitor}
-C {gnd.sym} 1190 -310 0 0 {name=l10 lab=GND}
-C {capa-2.sym} 1290 -370 0 0 {name=C2
-m=1
-value=500f
-footprint=1206
-device=polarized_capacitor}
-C {gnd.sym} 1290 -310 0 0 {name=l7 lab=GND}
+device=polarized_capacitor
+}
+C {gnd.sym} 1390 -310 0 0 {name=l7 lab=GND
+}
 C {lab_wire.sym} 1290 -480 0 0 {name=p19 sig_type=std_logic lab=Vout2}
-C {lab_wire.sym} 1190 -440 0 0 {name=p18 sig_type=std_logic lab=Vout1}
 C {gnd.sym} 950 -390 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 915 -600 0 0 {name=p2 sig_type=std_logic lab=VREF}
 C {lab_wire.sym} 950 -600 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {vsource.sym} 240 -215 0 0 {name=V6 value=1.62 savecurrent=false}
+C {vsource.sym} 240 -215 0 0 {name=V6 value=1.8 savecurrent=false}
 C {gnd.sym} 240 -165 0 0 {name=l8 lab=GND}
 C {lab_wire.sym} 240 -305 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {res.sym} 745 -530 1 0 {name=R3
@@ -79,10 +84,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib cornerMOSlv.lib mos_ss
+.lib cornerMOSlv.lib mos_tt
 .lib cornerRES.lib res_typ
 .lib cornerCAP.lib cap_typ
-.temp 125
+.temp 65
 "
 spice_ignore=false}
 C {code.sym} 225 -660 0 0 {name=AC only_toplevel=true value="
@@ -92,12 +97,12 @@ save all
 
 * AC simulation
 ac dec 1k 1 1T
-let Av = db((v(Vout2)-v(Vout1)))
+let Av = db((v(von)-v(vop)))
 meas ac Ao FIND Av WHEN frequency=10
 let ABW = Ao-3
 meas ac BW WHEN Av=ABW
 meas ac UGBW WHEN Av=0
-let phase_vec = 180/pi*cph(v(Vout2)-v(Vout1))
+let phase_vec = 180/pi*cph(v(von)-v(vop))
 
 * Phase margin (PM)
 meas ac phase FIND phase_vec WHEN frequency=UGBW 
@@ -116,8 +121,6 @@ meas ac UGBW4dB WHEN Av=4
 print GM
 plot Av
 plot phase_vec
-
-plot db(v(x1.Vo1)-v(x1.Vo2))
 
 write AC_OL.raw
 
@@ -313,3 +316,32 @@ print x2_vth_M0
 "
 spice_ignore=true}
 C {OTA_Telescopic_TOP_wp.sym} 950 -490 0 0 {name=x2}
+C {res.sym} 1470 -370 0 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 1470 -310 0 0 {name=l3 lab=GND
+}
+C {capa-2.sym} 1590 -390 0 0 {name=C3
+m=1
+value=25p
+footprint=1206
+device=polarized_capacitor
+}
+C {gnd.sym} 1590 -330 0 0 {name=l12 lab=GND
+}
+C {lab_wire.sym} 1490 -500 0 0 {name=p6 sig_type=std_logic lab=Vout1}
+C {res.sym} 1670 -390 0 0 {name=R5
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 1670 -330 0 0 {name=l13 lab=GND
+}
+C {noconn.sym} 1160 -540 2 0 {name=l2}
+C {noconn.sym} 1160 -520 2 0 {name=l6}
+C {lab_wire.sym} 1160 -540 0 0 {name=p1 sig_type=std_logic lab=Vop}
+C {lab_wire.sym} 1160 -520 0 0 {name=p7 sig_type=std_logic lab=Von}

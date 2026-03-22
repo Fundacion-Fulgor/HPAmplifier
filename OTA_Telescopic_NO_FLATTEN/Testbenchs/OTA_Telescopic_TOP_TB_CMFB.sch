@@ -9,9 +9,9 @@ T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} -325 360 0 0 0.4 0
 N -35 210 -35 230 {lab=GND}
 N 485 140 485 170 {lab=GND}
 N 585 140 585 170 {lab=GND}
-N 585 0 585 80 {lab=Vout2}
+N 585 60 585 80 {lab=Vout2}
 N 395 -20 485 -20 {lab=Vout1}
-N 485 -20 485 80 {lab=Vout1}
+N 485 60 485 80 {lab=Vout1}
 N 395 0 585 0 {lab=Vout2}
 N 245 80 245 90 {lab=GND}
 N 210 -120 210 -100 {lab=VREF}
@@ -43,9 +43,9 @@ N 350 105 350 130 {lab=vr1}
 N 760 215 760 235 {lab=GND}
 N 1280 145 1280 175 {lab=GND}
 N 1380 145 1380 175 {lab=GND}
-N 1380 5 1380 85 {lab=V2}
+N 1380 60 1380 85 {lab=V2}
 N 1190 -15 1280 -15 {lab=V1}
-N 1280 -15 1280 85 {lab=V1}
+N 1280 60 1280 85 {lab=V1}
 N 1190 5 1380 5 {lab=V2}
 N 1040 85 1040 95 {lab=GND}
 N 1005 -115 1005 -95 {lab=VREF}
@@ -78,17 +78,36 @@ N 795 -25 795 -10 {lab=#net5}
 N -35 -15 0 -15 {lab=#net2}
 N -35 -70 -35 -15 {lab=#net2}
 N 0 -30 0 -15 {lab=#net2}
+N 420 140 420 170 {lab=GND}
+N 420 60 420 80 {lab=Vout1}
+N 485 -20 485 60 {lab=Vout1}
+N 420 60 485 60 {lab=Vout1}
+N 660 120 660 150 {lab=GND}
+N 585 60 660 60 {lab=Vout2}
+N 585 0 585 60 {lab=Vout2}
+N 1460 140 1460 170 {lab=GND}
+N 1460 60 1460 80 {lab=V2}
+N 1380 60 1460 60 {lab=V2}
+N 1380 5 1380 60 {lab=V2}
+N 1340 260 1340 290 {lab=GND}
+N 1340 60 1340 200 {lab=V1}
+N 1280 60 1340 60 {lab=V1}
+N 1280 -15 1280 60 {lab=V1}
+N 390 -60 450 -60 {lab=Vop1}
+N 390 -40 450 -40 {lab=Von1}
+N 1190 -55 1250 -55 {lab=Vop}
+N 1190 -35 1250 -35 {lab=Von}
 C {vsource.sym} -35 180 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -35 230 0 0 {name=l5 lab=GND}
 C {capa-2.sym} 485 110 0 0 {name=C1
 m=1
-value=500f
+value=25p
 footprint=1206
 device=polarized_capacitor}
 C {gnd.sym} 485 170 0 0 {name=l10 lab=GND}
 C {capa-2.sym} 585 110 0 0 {name=C2
 m=1
-value=500f
+value=25p
 footprint=1206
 device=polarized_capacitor}
 C {gnd.sym} 585 170 0 0 {name=l7 lab=GND}
@@ -338,13 +357,13 @@ C {vsource.sym} 760 185 0 0 {name=V1 value=1.25 savecurrent=false}
 C {gnd.sym} 760 235 0 0 {name=l2 lab=GND}
 C {capa-2.sym} 1280 115 0 0 {name=C3
 m=1
-value=500f
+value=25p
 footprint=1206
 device=polarized_capacitor}
 C {gnd.sym} 1280 175 0 0 {name=l3 lab=GND}
 C {capa-2.sym} 1380 115 0 0 {name=C4
 m=1
-value=500f
+value=25p
 footprint=1206
 device=polarized_capacitor}
 C {gnd.sym} 1380 175 0 0 {name=l4 lab=GND}
@@ -369,3 +388,43 @@ C {lab_wire.sym} 350 130 2 0 {name=p13 sig_type=std_logic lab=vr1}
 C {lab_wire.sym} 290 130 0 0 {name=p12 sig_type=std_logic lab=vf1}
 C {OTA_Telescopic_TOP_wp.sym} 245 -10 0 0 {name=x1}
 C {OTA_Telescopic_TOP_wp.sym} 1040 -5 0 0 {name=x2}
+C {res.sym} 420 110 0 0 {name=R5
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 420 170 0 0 {name=l11 lab=GND
+}
+C {res.sym} 660 90 0 0 {name=R6
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 660 150 0 0 {name=l12 lab=GND
+}
+C {res.sym} 1460 110 0 0 {name=R7
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 1460 170 0 0 {name=l13 lab=GND
+}
+C {res.sym} 1340 230 0 0 {name=R8
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 1340 290 0 0 {name=l14 lab=GND
+}
+C {noconn.sym} 450 -60 2 0 {name=l15}
+C {noconn.sym} 450 -40 2 0 {name=l16}
+C {lab_wire.sym} 450 -60 0 0 {name=p9 sig_type=std_logic lab=Vop1}
+C {lab_wire.sym} 450 -40 0 0 {name=p10 sig_type=std_logic lab=Von1}
+C {noconn.sym} 1250 -55 2 0 {name=l17}
+C {noconn.sym} 1250 -35 2 0 {name=l18}
+C {lab_wire.sym} 1250 -55 0 0 {name=p11 sig_type=std_logic lab=Vop}
+C {lab_wire.sym} 1250 -35 0 0 {name=p14 sig_type=std_logic lab=Von}

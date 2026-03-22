@@ -13,7 +13,7 @@ N -885 105 -885 165 {lab=VDD}
 N -765 225 -765 245 {lab=GND}
 N 160 60 160 90 {lab=GND}
 N 260 60 260 90 {lab=GND}
-N 260 -80 260 0 {lab=Vout2}
+N 260 -40 260 0 {lab=Vout2}
 N -330 110 -330 140 {lab=#net1}
 N -450 140 -330 140 {lab=#net1}
 N -560 -40 -560 140 {lab=#net1}
@@ -21,7 +21,7 @@ N -560 -150 -560 -100 {lab=VP}
 N -560 -150 -230 -150 {lab=VP}
 N -560 140 -450 140 {lab=#net1}
 N 70 -100 160 -100 {lab=Vout1}
-N 160 -100 160 0 {lab=Vout1}
+N 160 -30 160 0 {lab=Vout1}
 N 70 -80 260 -80 {lab=Vout2}
 N -330 -35 -330 50 {lab=VN}
 N -250 -130 -250 -110 {lab=#net2}
@@ -41,6 +41,14 @@ N -765 95 -765 165 {lab=VREF}
 N -670 230 -670 245 {lab=GND}
 N -670 155 -670 170 {lab=sub!}
 N -670 155 -610 155 {lab=sub!}
+N 100 60 100 90 {lab=GND}
+N 100 -30 100 0 {lab=Vout1}
+N 100 -30 160 -30 {lab=Vout1}
+N 160 -100 160 -30 {lab=Vout1}
+N 340 40 340 70 {lab=GND}
+N 340 -40 340 -20 {lab=Vout2}
+N 260 -40 340 -40 {lab=Vout2}
+N 260 -80 260 -40 {lab=Vout2}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
 C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
@@ -52,13 +60,13 @@ C {gnd.sym} -765 245 0 0 {name=l4 lab=GND}
 C {lab_wire.sym} -765 95 0 0 {name=p4 sig_type=std_logic lab=VREF}
 C {capa-2.sym} 160 30 0 0 {name=C1
 m=1
-value=500f
+value=25p
 footprint=1206
 device=polarized_capacitor}
 C {gnd.sym} 160 90 0 0 {name=l10 lab=GND}
 C {capa-2.sym} 260 30 0 0 {name=C2
 m=1
-value=500f
+value=25p
 footprint=1206
 device=polarized_capacitor}
 C {gnd.sym} 260 90 0 0 {name=l7 lab=GND}
@@ -115,7 +123,7 @@ write OTA_Telescopic_TOP_TB_CL.raw
 .endc
 "
 
-spice_ignore=true}
+}
 C {devices/launcher.sym} -530 -250 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
@@ -345,4 +353,20 @@ print onoise_total
 
 .endc
 "
+spice_ignore=true}
+C {res.sym} 100 30 0 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 100 90 0 0 {name=l8 lab=GND
+}
+C {res.sym} 340 10 0 0 {name=R3
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 340 70 0 0 {name=l9 lab=GND
 }
