@@ -20,7 +20,7 @@
 - Juan Moran       (BSc in EE Student at UNT)
 
 
-
+![Expected outcome](Figures/HPA_Topology.svg)
 
 This repository contains 5 versions of the HPA design. The first 3 are outdated versions, while the one called "OTA_Telescopic" includes the latest progress. In addition, the "OTA_Telescopic_TEST" folder contains tests of alternative solutions to issues with the tools/software.
 
