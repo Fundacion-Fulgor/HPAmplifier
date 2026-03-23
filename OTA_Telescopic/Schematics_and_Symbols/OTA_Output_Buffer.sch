@@ -19,13 +19,13 @@ C {sg13g2_pr/sg13_lv_nmos.sym} 240 1120 0 0 {name=M1
 l=0.15u
 w=10u
 ng=1
-m=200
+m=50
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/rppd.sym} 260 1220 0 0 {name=R1
 w=2e-6
-l=4e-6
+l=40e-6
 model=rppd
 body=VSS
 spiceprefix=X

@@ -70,7 +70,7 @@ m=1
 }
 C {sg13g2_pr/rppd.sym} 1080 -1020 3 0 {name=R5
 w=0.6e-6
-l=19.3e-6
+l=19e-6
 model=rppd
 body=VSS
 spiceprefix=X
@@ -79,7 +79,7 @@ m=1
 }
 C {sg13g2_pr/rppd.sym} 1070 -440 3 0 {name=R2
 w=0.6e-6
-l=19.3e-6
+l=19e-6
 model=rppd
 body=VSS
 spiceprefix=X

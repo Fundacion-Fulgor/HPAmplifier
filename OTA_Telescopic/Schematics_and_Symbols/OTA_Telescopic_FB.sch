@@ -6,8 +6,6 @@ S {}
 F {}
 E {}
 N 1100 -660 1100 -640 {lab=VSS}
-N 1110 -1020 1600 -1020 {lab=VOUTP}
-N 1100 -440 1600 -440 {lab=VOUTN}
 N 780 -640 800 -640 {lab=VNout}
 N 780 -820 800 -820 {lab=VPout}
 N 980 -700 1000 -700 {lab=VNin}
@@ -18,8 +16,8 @@ N 1100 -840 1170 -840 {lab=VDD}
 N 1080 -870 1080 -820 {lab=IB}
 N 760 -640 780 -640 {lab=VNout}
 N 760 -820 780 -820 {lab=VPout}
-N 1200 -760 1320 -760 {lab=#net1}
-N 1200 -720 1320 -720 {lab=#net2}
+N 1200 -760 1320 -760 {lab=VOUTP}
+N 1200 -720 1320 -720 {lab=VOUTN}
 N 655 -745 715 -745 {lab=VDD}
 N 655 -715 715 -715 {lab=VSS}
 N 645 -640 700 -640 {lab=VN}
@@ -28,20 +26,16 @@ N 780 -640 780 -440 {lab=VNout}
 N 780 -440 1040 -440 {lab=VNout}
 N 780 -1020 1050 -1020 {lab=VPout}
 N 1080 -660 1080 -610 {lab=CMFBin}
-N 1420 -580 1420 -560 {lab=VSS}
-N 1420 -780 1420 -760 {lab=VSS}
-N 1320 -840 1320 -760 {lab=#net1}
-N 1320 -840 1360 -840 {lab=#net1}
-N 1320 -720 1320 -640 {lab=#net2}
-N 1320 -640 1360 -640 {lab=#net2}
-N 1500 -640 1600 -640 {lab=VOUTN}
-N 1600 -640 1640 -640 {lab=VOUTN}
-N 1500 -840 1600 -840 {lab=VOUTP}
-N 1600 -840 1640 -840 {lab=VOUTP}
-N 1600 -640 1600 -440 {lab=VOUTN}
-N 1600 -1020 1600 -840 {lab=VOUTP}
-N 1420 -940 1420 -900 {lab=VDD}
-N 1420 -740 1420 -700 {lab=#net3}
+N 1320 -840 1320 -760 {lab=VOUTP}
+N 1320 -840 1540 -840 {lab=VOUTP}
+N 1320 -720 1320 -640 {lab=VOUTN}
+N 1320 -640 1540 -640 {lab=VOUTN}
+N 1540 -640 1640 -640 {lab=VOUTN}
+N 1540 -840 1640 -840 {lab=VOUTP}
+N 1540 -640 1540 -440 {lab=VOUTN}
+N 1540 -1020 1540 -840 {lab=VOUTP}
+N 1110 -1020 1540 -1020 {lab=VOUTP}
+N 1100 -440 1540 -440 {lab=VOUTN}
 C {lab_wire.sym} 1170 -840 2 0 {name=p10 sig_type=std_logic lab=VDD}
 C {OTA_Telescopic_core.sym} 1080 -740 0 0 {name=x1}
 C {lab_wire.sym} 1100 -640 2 0 {name=p1 sig_type=std_logic lab=VSS}
@@ -76,7 +70,7 @@ m=1
 }
 C {sg13g2_pr/rppd.sym} 1080 -1020 3 0 {name=R5
 w=0.6e-6
-l=15.4e-6
+l=19.3e-6
 model=rppd
 body=VSS
 spiceprefix=X
@@ -85,7 +79,7 @@ m=1
 }
 C {sg13g2_pr/rppd.sym} 1070 -440 3 0 {name=R2
 w=0.6e-6
-l=15.4e-6
+l=19.3e-6
 model=rppd
 body=VSS
 spiceprefix=X
@@ -93,9 +87,3 @@ b=0
 m=1
 }
 C {ipin.sym} 1080 -870 0 0 {name=p2 lab=IB}
-C {OTA_Output_Buffer.sym} 1420 -840 0 0 {name=x2}
-C {OTA_Output_Buffer.sym} 1420 -640 0 0 {name=x3}
-C {lab_wire.sym} 1420 -560 2 0 {name=p4 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 1420 -760 2 0 {name=p5 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 1420 -940 2 0 {name=p11 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 1420 -740 2 0 {name=p13 sig_type=std_logic lab=VDD}

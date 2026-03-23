@@ -5,7 +5,7 @@ V {}
 S {}
 F {}
 E {}
-T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} -635 510 0 0 0.4 0.4 {}
+T {dc 0.9 pwl(0 0.8 0.005u 0.8 0.005u 0.9 0.15m 0.9 0.15m 0)} -15 -10 0 0 0.4 0.4 {}
 N 625 -230 625 -150 {lab=VCM}
 N 625 -90 625 -70 {lab=GND}
 N 190 -145 190 -125 {lab=GND}
@@ -14,7 +14,7 @@ N 370 -145 370 -125 {lab=GND}
 N 370 -265 370 -205 {lab=VREF}
 N 1235 -310 1235 -280 {lab=GND}
 N 1335 -310 1335 -280 {lab=GND}
-N 1335 -450 1335 -370 {lab=Vout2}
+N 1335 -400 1335 -370 {lab=Vout2}
 N 625 -230 745 -230 {lab=VCM}
 N 745 -370 745 -230 {lab=VCM}
 N 745 -370 775 -370 {lab=VCM}
@@ -22,7 +22,7 @@ N 515 -550 515 -230 {lab=VCM}
 N 515 -550 775 -550 {lab=VCM}
 N 515 -230 625 -230 {lab=VCM}
 N 1145 -470 1235 -470 {lab=Vout1}
-N 1235 -470 1235 -370 {lab=Vout1}
+N 1235 -400 1235 -370 {lab=Vout1}
 N 1145 -450 1335 -450 {lab=Vout2}
 N 775 -550 775 -520 {lab=VCM}
 N 775 -520 845 -520 {lab=VCM}
@@ -34,6 +34,14 @@ N 995 -370 995 -360 {lab=GND}
 N 960 -570 960 -550 {lab=VREF}
 N 995 -570 995 -550 {lab=VDD}
 N 1040 -370 1085 -370 {lab=#net3}
+N 1440 -320 1440 -290 {lab=GND}
+N 1440 -400 1440 -380 {lab=Vout2}
+N 1335 -400 1440 -400 {lab=Vout2}
+N 1335 -450 1335 -400 {lab=Vout2}
+N 1160 -320 1160 -290 {lab=GND}
+N 1160 -400 1160 -380 {lab=Vout1}
+N 1160 -400 1235 -400 {lab=Vout1}
+N 1235 -470 1235 -400 {lab=Vout1}
 C {vsource.sym} 625 -120 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} 625 -70 0 0 {name=l5 lab=GND}
 C {vsource.sym} 190 -175 0 0 {name=V1 value="dc 1.8 pwl(0 0 10n 1.8)" savecurrent=false}
@@ -44,13 +52,13 @@ C {gnd.sym} 370 -125 0 0 {name=l4 lab=GND}
 C {lab_wire.sym} 370 -265 0 0 {name=p4 sig_type=std_logic lab=VREF}
 C {capa-2.sym} 1235 -340 0 0 {name=C1
 m=1
-value=500f
+value=25p
 footprint=1206
 device=polarized_capacitor}
 C {gnd.sym} 1235 -280 0 0 {name=l10 lab=GND}
 C {capa-2.sym} 1335 -340 0 0 {name=C2
 m=1
-value=500f
+value=25p
 footprint=1206
 device=polarized_capacitor}
 C {gnd.sym} 1335 -280 0 0 {name=l7 lab=GND}
@@ -311,3 +319,19 @@ C {gnd.sym} 995 -360 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 960 -570 0 0 {name=p2 sig_type=std_logic lab=VREF}
 C {lab_wire.sym} 995 -570 0 0 {name=p3 sig_type=std_logic lab=VDD}
 C {OTA_Telescopic_TOP_wp.sym} 995 -460 0 0 {name=x2}
+C {res.sym} 1440 -350 0 0 {name=R1
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 1440 -290 0 0 {name=l2 lab=GND
+}
+C {res.sym} 1160 -350 0 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1
+}
+C {gnd.sym} 1160 -290 0 0 {name=l6 lab=GND
+}
