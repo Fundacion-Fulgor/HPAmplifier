@@ -1,7 +1,0 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 21/03/2026 21:17
-
-.SUBCKT OTA_Output_Buffer VSS Vin Vout VDD
-M$1 VDD Vin Vout VSS sg13_lv_nmos L=0.15u W=2000u AS=392p AD=392p PS=2158.4u
-+ PD=2158.4u
-R$201 VSS Vout rppd w=2u l=4u ps=0 b=0 m=1
-.ENDS OTA_Output_Buffer
