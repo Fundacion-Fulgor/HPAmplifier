@@ -1,4 +1,4 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 23/03/2026 16:39
+* Extracted by KLayout with SG13G2 LVS runset on : 23/03/2026 19:56
 
 .SUBCKT OTA_Telescopic_TOP_wp VSS IB|I_P2 IB|I_P3 VOUT VDD VOUT$1 IB|I_P
 + CMFB|CMFBout VREF IBIAS|I_N CMFB|CMFBin VN VP VINP|VPin VINN|VNin
@@ -41,21 +41,21 @@ M$164 IB|I_P IB|I_P VSS VSS sg13_lv_nmos L=1.06u W=4.8u AS=1.632p AD=1.632p
 + PS=10.28u PD=10.28u
 M$165 \$256 IB|I_P VSS VSS sg13_lv_nmos L=1.06u W=4.8u AS=1.632p AD=0.912p
 + PS=10.28u PD=5.18u
-M$166 VSS IB|I_P \$272 VSS sg13_lv_nmos L=1.06u W=4.8u AS=0.912p AD=1.632p
+M$166 VSS IB|I_P \$273 VSS sg13_lv_nmos L=1.06u W=4.8u AS=0.912p AD=1.632p
 + PS=5.18u PD=10.28u
-M$167 \$271 \$271 VSS VSS sg13_lv_nmos L=0.8u W=0.5u AS=0.17p AD=0.17p PS=1.68u
+M$167 \$272 \$272 VSS VSS sg13_lv_nmos L=0.8u W=0.5u AS=0.17p AD=0.17p PS=1.68u
 + PD=1.68u
 M$168 \$258 CMFB|CMFBin VSS VSS sg13_lv_nmos L=0.2u W=179.82u AS=34.6653p
 + AD=34.6653p PS=203.97u PD=203.97u
 M$222 VIN|VINP|VOUTN|VOUTP IB|I_P VSS VSS sg13_lv_nmos L=1.06u W=264u AS=53.76p
 + AD=53.76p PS=310.4u PD=310.4u
-M$233 \$281 \$271 \$277 VSS sg13_lv_nmos L=0.16u W=57u AS=12.255p AD=12.255p
+M$233 \$284 \$272 \$278 VSS sg13_lv_nmos L=0.16u W=57u AS=12.255p AD=12.255p
 + PS=79.4u PD=79.4u
-M$239 \$258 VINP|VPin \$281 VSS sg13_lv_nmos L=0.15u W=33u AS=7.095p AD=7.095p
+M$239 \$258 VINP|VPin \$284 VSS sg13_lv_nmos L=0.15u W=33u AS=7.095p AD=7.095p
 + PS=51.4u PD=51.4u
-M$251 \$258 VINN|VNin \$282 VSS sg13_lv_nmos L=0.15u W=33u AS=7.095p AD=7.095p
+M$251 \$258 VINN|VNin \$285 VSS sg13_lv_nmos L=0.15u W=33u AS=7.095p AD=7.095p
 + PS=51.4u PD=51.4u
-M$263 \$282 \$271 \$278 VSS sg13_lv_nmos L=0.16u W=57u AS=12.255p AD=12.255p
+M$263 \$285 \$272 \$279 VSS sg13_lv_nmos L=0.16u W=57u AS=12.255p AD=12.255p
 + PS=79.4u PD=79.4u
 M$269 VSS IB|I_P VIN|VINN|VOUTN|VOUTP VSS sg13_lv_nmos L=1.06u W=264u AS=53.76p
 + AD=53.76p PS=310.4u PD=310.4u
@@ -91,31 +91,31 @@ M$558 VDD IBIAS|I_N \$150 VDD sg13_lv_pmos L=0.7u W=144u AS=27.36p AD=28.26p
 + PS=198.72u PD=206.52u
 M$878 VDD IBIAS|I_N IBIAS|I_N VDD sg13_lv_pmos L=0.7u W=48u AS=9.27p AD=9.27p
 + PS=67.54u PD=67.54u
-M$926 VDD \$277 VIN|VINP|VOUTN|VOUTP VDD sg13_lv_pmos L=0.35u W=342.5u
+M$926 VDD \$278 VIN|VINP|VOUTN|VOUTP VDD sg13_lv_pmos L=0.35u W=342.5u
 + AS=70.2125p AD=70.2125p PS=479.25u PD=479.25u
 M$936 VDD \$256 \$256 VDD sg13_lv_pmos L=0.35u W=11.2u AS=2.548p AD=2.548p
 + PS=17.64u PD=17.64u
-M$944 \$272 \$272 VDD VDD sg13_lv_pmos L=0.35u W=2.05u AS=0.697p AD=0.3895p
+M$944 \$273 \$273 VDD VDD sg13_lv_pmos L=0.35u W=2.05u AS=0.697p AD=0.3895p
 + PS=4.78u PD=2.43u
-M$945 VDD \$272 \$271 VDD sg13_lv_pmos L=0.35u W=2.05u AS=0.3895p AD=0.697p
+M$945 VDD \$273 \$272 VDD sg13_lv_pmos L=0.35u W=2.05u AS=0.3895p AD=0.697p
 + PS=2.43u PD=4.78u
-M$946 \$276 \$272 \$277 VDD sg13_lv_pmos L=0.5u W=121.5u AS=26.1225p
+M$946 \$277 \$273 \$278 VDD sg13_lv_pmos L=0.5u W=121.5u AS=26.1225p
 + AD=26.1225p PS=154.65u PD=154.65u
-M$958 \$279 \$272 \$278 VDD sg13_lv_pmos L=0.5u W=121.5u AS=26.1225p
+M$958 \$280 \$273 \$279 VDD sg13_lv_pmos L=0.5u W=121.5u AS=26.1225p
 + AD=26.1225p PS=154.65u PD=154.65u
-M$970 VDD \$278 VIN|VINN|VOUTN|VOUTP VDD sg13_lv_pmos L=0.35u W=342.5u
+M$970 VDD \$279 VIN|VINN|VOUTN|VOUTP VDD sg13_lv_pmos L=0.35u W=342.5u
 + AS=70.2125p AD=70.2125p PS=479.25u PD=479.25u
-M$1022 VDD \$256 \$276 VDD sg13_lv_pmos L=0.7u W=210u AS=45.15p AD=45.15p
+M$1022 VDD \$256 \$277 VDD sg13_lv_pmos L=0.7u W=210u AS=45.15p AD=45.15p
 + PS=257.9u PD=257.9u
-M$1028 VDD \$256 \$279 VDD sg13_lv_pmos L=0.7u W=210u AS=45.15p AD=45.15p
+M$1028 VDD \$256 \$280 VDD sg13_lv_pmos L=0.7u W=210u AS=45.15p AD=45.15p
 + PS=257.9u PD=257.9u
 R$1556 VSS \$2 rppd w=1u l=11.5u ps=0 b=0 m=1
 R$1557 VN VNout rppd w=0.6u l=6.73u ps=0 b=0 m=1
 R$1558 VP VPout rppd w=0.6u l=6.73u ps=0 b=0 m=1
 R$1559 VNout VIN|VINP|VOUTN|VOUTP rppd w=0.6u l=19u ps=0 b=0 m=1
 R$1560 VPout VIN|VINN|VOUTN|VOUTP rppd w=0.6u l=19u ps=0 b=0 m=1
-R$1561 \$277 \$815 rppd w=1.5u l=0.55u ps=0 b=0 m=1
-R$1562 \$278 \$816 rppd w=1.5u l=0.55u ps=0 b=0 m=1
-C$1563 \$815 VIN|VINP|VOUTN|VOUTP cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
-C$1564 \$816 VIN|VINN|VOUTN|VOUTP cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
+R$1561 \$278 \$794 rppd w=1.5u l=0.55u ps=0 b=0 m=1
+R$1562 \$279 \$795 rppd w=1.5u l=0.55u ps=0 b=0 m=1
+C$1563 \$794 VIN|VINP|VOUTN|VOUTP cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
+C$1564 \$795 VIN|VINN|VOUTN|VOUTP cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
 .ENDS OTA_Telescopic_TOP_wp
