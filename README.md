@@ -1,4 +1,26 @@
-# UNIC-CASS Postulations by Fundación Fulgor
+# High performance amplifier (HPA) - UNIC-CASS Postulations by Fundación Fulgor
+
+## Pin List for the project
+
+| Pin Name | Type    | Direction     | Description            |
+|----------|--------|--------------|------------------------  |
+| VDD      | Power  | Bidirectional | Positive power supply   |
+| VREF     | Analog | Bidirectional | Voltage reference       |
+| VSS      | Power  | Bidirectional | Negative power supply   |
+| VINp     | Analog | Input         | Input positive voltage  |
+| VINn     | Analog | Input         | Input negative voltage  | 
+| VOUTn    | Analog | Output        | Output negative voltage |
+| VOUTp    | Analog | Output        | Output positive voltage |
+
+## Team Members:
+
+- Over Amaya       (MSc in EE Student at UNS)
+- Santiago Recalde (MSc in EE Student at UNS)
+- Ezequiel Georgis (BSc in EE Student at UNT)
+- Juan Moran       (BSc in EE Student at UNT)
+
+
+
 
 This repository contains 5 versions of the HPA design. The first 3 are outdated versions, while the one called "OTA_Telescopic" includes the latest progress. In addition, the "OTA_Telescopic_TEST" folder contains tests of alternative solutions to issues with the tools/software.
 
@@ -49,3 +71,11 @@ Inside the "OTA_Telescopic" folder there are three directories:
       OTA_Telescopic_TOP_TB_StartUp.sch: startup testbench.
 
       Testbenches that include "io" correspond to the same analyses performed while accounting for the effects of the IOCells.
+
+## References
+
+[1] F. Tolosa, E. Dri, Á. F. Bocco and B. T. Reyes, "High Performance Amplifier in 130nm CMOS Technology using an Open Source Design Flow for 10Gbase-T Ethernet Transceivers," 2023 Argentine Conference on Electronics (CAE), Cordoba, Argentina, 2023, pp. 75-80, doi: 10.1109/CAE56623.2023.10087008.
+
+[2] B. Razavi, Design Of Analog Cmos Integrated Circuit , 2Nd Edition, Mc Graw Hill India, 2017
+
+[3] P. E. Allen and D. R. Holberg, CMOS Analog Circuit Design, 3rd ed. New York, NY: Oxford University Press, 2011.
