@@ -1,4 +1,4 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 23/03/2026 02:36
+* Extracted by KLayout with SG13G2 LVS runset on : 23/03/2026 14:24
 
 .SUBCKT OTA_Telescopic_FB VSS IB CMFB|CMFBin VN VP VINP|VPin VINN|VNin VDD
 + VOUTN|VOUTP VOUTN|VOUTP$1 VNout VPout
