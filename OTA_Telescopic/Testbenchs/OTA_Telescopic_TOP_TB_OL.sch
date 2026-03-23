@@ -47,6 +47,8 @@ N 1670 -360 1670 -330 {lab=GND}
 N 1670 -440 1670 -420 {lab=Vout1}
 N 1590 -440 1670 -440 {lab=Vout1}
 N 1590 -500 1590 -440 {lab=Vout1}
+N 1100 -540 1160 -540 {lab=Vop}
+N 1100 -520 1160 -520 {lab=Von}
 C {vsource.sym} 670 -300 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} 670 -250 0 0 {name=l5 lab=GND}
 C {capa-2.sym} 1390 -370 0 0 {name=C2
@@ -95,12 +97,12 @@ save all
 
 * AC simulation
 ac dec 1k 1 1T
-let Av = db((v(Vout2)-v(Vout1)))
+let Av = db((v(von)-v(vop)))
 meas ac Ao FIND Av WHEN frequency=10
 let ABW = Ao-3
 meas ac BW WHEN Av=ABW
 meas ac UGBW WHEN Av=0
-let phase_vec = 180/pi*cph(v(Vout2)-v(Vout1))
+let phase_vec = 180/pi*cph(v(von)-v(vop))
 
 * Phase margin (PM)
 meas ac phase FIND phase_vec WHEN frequency=UGBW 
@@ -119,8 +121,6 @@ meas ac UGBW4dB WHEN Av=4
 print GM
 plot Av
 plot phase_vec
-
-plot db(v(x1.Vo1)-v(x1.Vo2))
 
 write AC_OL.raw
 
@@ -341,3 +341,7 @@ m=1
 }
 C {gnd.sym} 1670 -330 0 0 {name=l13 lab=GND
 }
+C {noconn.sym} 1160 -540 2 0 {name=l2}
+C {noconn.sym} 1160 -520 2 0 {name=l6}
+C {lab_wire.sym} 1160 -540 0 0 {name=p1 sig_type=std_logic lab=Vop}
+C {lab_wire.sym} 1160 -520 0 0 {name=p7 sig_type=std_logic lab=Von}

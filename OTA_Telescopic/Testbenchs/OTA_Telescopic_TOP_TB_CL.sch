@@ -46,9 +46,11 @@ N 640 40 640 70 {lab=GND}
 N 640 -40 640 -20 {lab=Vout1}
 N 560 -40 640 -40 {lab=Vout1}
 N 560 -100 560 -40 {lab=Vout1}
+N 70 -140 130 -140 {lab=Vop}
+N 70 -120 130 -120 {lab=Von}
 C {vsource.sym} -450 250 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -450 300 0 0 {name=l5 lab=GND}
-C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0458 400000000) AC 0.5" savecurrent=false}
+C {vsource.sym} -560 -70 0 0 {name=V5 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
 C {vsource.sym} -885 195 0 0 {name=V1 value=1.8 savecurrent=false}
 C {gnd.sym} -885 245 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} -885 105 0 0 {name=p1 sig_type=std_logic lab=VDD}
@@ -106,7 +108,7 @@ write OTA_Telescopic_TOP_TB_CL.raw
 .endc
 "
 
-spice_ignore=true}
+}
 C {devices/launcher.sym} -530 -250 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
@@ -300,10 +302,10 @@ print onoise_total
 
 .endc
 "
-}
+spice_ignore=true}
 C {lab_wire.sym} -370 -150 0 0 {name=p7 sig_type=std_logic lab=VP}
 C {lab_wire.sym} -310 -30 0 0 {name=p8 sig_type=std_logic lab=VN}
-C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0458 400000000) AC 0.5" savecurrent=false}
+C {vsource.sym} -330 80 2 0 {name=V3 value="0 SIN(0 0.0558 400000000) AC 0.5" savecurrent=false}
 C {code.sym} -740 -100 0 0 {name=STEP
 only_toplevel=true
 value="
@@ -340,7 +342,7 @@ device=resistor
 m=1
 }
 C {gnd.sym} 440 90 0 0 {name=l2 lab=GND
-}
+spice_ignore=short}
 C {capa-2.sym} 560 10 0 0 {name=C3
 m=1
 value=25p
@@ -357,4 +359,8 @@ device=resistor
 m=1
 }
 C {gnd.sym} 640 70 0 0 {name=l13 lab=GND
-}
+spice_ignore=short}
+C {noconn.sym} 130 -140 2 0 {name=l6}
+C {noconn.sym} 130 -120 2 0 {name=l8}
+C {lab_wire.sym} 130 -140 0 0 {name=p5 sig_type=std_logic lab=Vop}
+C {lab_wire.sym} 130 -120 0 0 {name=p9 sig_type=std_logic lab=Von}

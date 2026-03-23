@@ -150,6 +150,8 @@ N 235 -590 315 -590 {lab=VNin}
 N 555 -520 555 -460 {lab=CMFBout}
 N 510 -520 510 -460 {lab=CMFBin}
 N 430 -760 430 -700 {lab=vref}
+N 610 -660 670 -660 {lab=Vop}
+N 610 -640 670 -640 {lab=Von}
 C {ipin.sym} 235 -630 0 0 {name=p6 lab=VPin}
 C {ipin.sym} 235 -590 0 0 {name=p9 lab=VNin}
 C {iopin.sym} 465 -760 3 0 {name=p19 lab=VDD}
@@ -230,3 +232,7 @@ C {iopin.sym} 850 -1145 0 1 {name=p35 lab=VREF}
 C {OTA_Telescopic_TOP_wp.sym} 465 -610 0 0 {name=x16}
 C {lab_wire.sym} 275 -670 0 0 {name=p38 sig_type=std_logic lab=vp}
 C {lab_wire.sym} 275 -550 0 0 {name=p39 sig_type=std_logic lab=vn}
+C {noconn.sym} 670 -660 2 0 {name=l2}
+C {noconn.sym} 670 -640 2 0 {name=l6}
+C {lab_wire.sym} 670 -660 0 0 {name=p1 sig_type=std_logic lab=Vop}
+C {lab_wire.sym} 670 -640 0 0 {name=p7 sig_type=std_logic lab=Von}

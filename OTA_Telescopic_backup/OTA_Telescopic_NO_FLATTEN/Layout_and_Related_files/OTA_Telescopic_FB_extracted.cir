@@ -1,0 +1,53 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 23/03/2026 19:54
+
+.SUBCKT OTA_Telescopic_FB VSS IB CMFB|CMFBin VN VP VINP|VPin VINN|VNin
++ VOUTN|VOUTP VDD VOUTN|VOUTP$1 VNout VPout
+M$1 IB IB VSS VSS sg13_lv_nmos L=1.06u W=4.8u AS=1.632p AD=1.632p PS=10.28u
++ PD=10.28u
+M$2 \$3 IB VSS VSS sg13_lv_nmos L=1.06u W=4.8u AS=1.632p AD=0.912p PS=10.28u
++ PD=5.18u
+M$3 VSS IB \$19 VSS sg13_lv_nmos L=1.06u W=4.8u AS=0.912p AD=1.632p PS=5.18u
++ PD=10.28u
+M$4 \$18 \$18 VSS VSS sg13_lv_nmos L=0.8u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u
+M$5 \$5 CMFB|CMFBin VSS VSS sg13_lv_nmos L=0.2u W=179.82u AS=34.6653p
++ AD=34.6653p PS=203.97u PD=203.97u
+M$59 VOUTN|VOUTP IB VSS VSS sg13_lv_nmos L=1.06u W=264u AS=53.76p AD=53.76p
++ PS=310.4u PD=310.4u
+M$70 \$31 \$18 \$24 VSS sg13_lv_nmos L=0.16u W=57u AS=12.255p AD=12.255p
++ PS=79.4u PD=79.4u
+M$76 \$5 VINP|VPin \$31 VSS sg13_lv_nmos L=0.15u W=33u AS=7.095p AD=7.095p
++ PS=51.4u PD=51.4u
+M$88 \$5 VINN|VNin \$32 VSS sg13_lv_nmos L=0.15u W=33u AS=7.095p AD=7.095p
++ PS=51.4u PD=51.4u
+M$100 \$32 \$18 \$26 VSS sg13_lv_nmos L=0.16u W=57u AS=12.255p AD=12.255p
++ PS=79.4u PD=79.4u
+M$106 VSS IB VOUTN|VOUTP$1 VSS sg13_lv_nmos L=1.06u W=264u AS=53.76p AD=53.76p
++ PS=310.4u PD=310.4u
+M$289 \$23 \$19 \$24 VDD sg13_lv_pmos L=0.5u W=121.5u AS=26.1225p AD=26.1225p
++ PS=154.65u PD=154.65u
+M$295 \$27 \$19 \$26 VDD sg13_lv_pmos L=0.5u W=121.5u AS=26.1225p AD=26.1225p
++ PS=154.65u PD=154.65u
+M$301 VDD \$3 \$3 VDD sg13_lv_pmos L=0.35u W=11.2u AS=2.548p AD=2.548p
++ PS=17.64u PD=17.64u
+M$317 VDD \$24 VOUTN|VOUTP VDD sg13_lv_pmos L=0.35u W=342.5u AS=70.2125p
++ AD=70.2125p PS=479.25u PD=479.25u
+M$331 \$19 \$19 VDD VDD sg13_lv_pmos L=0.35u W=2.05u AS=0.697p AD=0.3895p
++ PS=4.78u PD=2.43u
+M$332 VDD \$19 \$18 VDD sg13_lv_pmos L=0.35u W=2.05u AS=0.3895p AD=0.697p
++ PS=2.43u PD=4.78u
+M$333 VDD \$26 VOUTN|VOUTP$1 VDD sg13_lv_pmos L=0.35u W=342.5u AS=70.2125p
++ AD=70.2125p PS=479.25u PD=479.25u
+M$385 VDD \$3 \$23 VDD sg13_lv_pmos L=0.7u W=210u AS=45.15p AD=45.15p PS=257.9u
++ PD=257.9u
+M$391 VDD \$3 \$27 VDD sg13_lv_pmos L=0.7u W=210u AS=45.15p AD=45.15p PS=257.9u
++ PD=257.9u
+R$919 VN VNout rppd w=0.6u l=6.73u ps=0 b=0 m=1
+R$920 VP VPout rppd w=0.6u l=6.73u ps=0 b=0 m=1
+R$921 VNout VOUTN|VOUTP rppd w=0.6u l=19u ps=0 b=0 m=1
+R$922 VPout VOUTN|VOUTP$1 rppd w=0.6u l=19u ps=0 b=0 m=1
+R$923 \$24 \$564 rppd w=1.5u l=0.55u ps=0 b=0 m=1
+R$924 \$26 \$541 rppd w=1.5u l=0.55u ps=0 b=0 m=1
+C$925 \$564 VOUTN|VOUTP cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
+C$926 \$541 VOUTN|VOUTP$1 cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
+.ENDS OTA_Telescopic_FB

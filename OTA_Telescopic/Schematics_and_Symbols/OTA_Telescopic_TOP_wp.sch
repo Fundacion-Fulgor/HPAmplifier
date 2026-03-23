@@ -9,35 +9,35 @@ N 1100 -660 1100 -640 {lab=VSS}
 N 1080 -660 1080 -600 {lab=CMFBin}
 N 1060 -380 1060 -370 {lab=VSS}
 N 920 -440 970 -440 {lab=CMFBout}
-N 1200 -420 1415 -420 {lab=#net1}
-N 1200 -460 1360 -460 {lab=#net2}
+N 1200 -420 1415 -420 {lab=Vop}
+N 1200 -460 1360 -460 {lab=Von}
 N 1060 -520 1060 -500 {lab=VDD}
 N 1110 -520 1110 -500 {lab=VREF}
 N 1110 -380 1110 -320 {lab=I_N}
 N 980 -690 1000 -690 {lab=VNout}
 N 980 -790 1000 -790 {lab=VPout}
-N 1415 -720 1600 -720 {lab=#net1}
+N 1450 -720 1600 -720 {lab=Vop}
 N 980 -710 1000 -710 {lab=VNin}
 N 980 -770 1000 -770 {lab=VPin}
 N 1230 -1060 1250 -1060 {lab=I_P}
 N 1100 -840 1100 -820 {lab=VDD}
 N 1100 -840 1170 -840 {lab=VDD}
 N 1080 -870 1080 -820 {lab=I_P}
-N 1360 -760 1600 -760 {lab=#net2}
-N 1200 -760 1360 -760 {lab=#net2}
-N 1200 -720 1415 -720 {lab=#net1}
+N 1450 -760 1600 -760 {lab=Von}
+N 1200 -760 1360 -760 {lab=Von}
+N 1200 -720 1415 -720 {lab=Vop}
 N 810 -920 870 -920 {lab=VDD}
 N 810 -890 870 -890 {lab=VSS}
 N 1080 -1110 1080 -1090 {lab=VDD}
 N 1080 -970 1080 -950 {lab=VSS}
 N 980 -730 1000 -730 {lab=VN}
 N 980 -750 1000 -750 {lab=VP}
-N 1415 -720 1415 -420 {lab=#net1}
-N 1360 -760 1360 -460 {lab=#net2}
-N 1600 -870 1600 -760 {lab=#net2}
-N 1600 -870 1620 -870 {lab=#net2}
-N 1600 -720 1600 -610 {lab=#net1}
-N 1600 -610 1620 -610 {lab=#net1}
+N 1415 -720 1415 -420 {lab=Vop}
+N 1360 -760 1360 -460 {lab=Von}
+N 1600 -870 1600 -760 {lab=Von}
+N 1600 -870 1620 -870 {lab=Von}
+N 1600 -720 1600 -610 {lab=Vop}
+N 1600 -610 1620 -610 {lab=Vop}
 N 1800 -610 1880 -610 {lab=VOUTP}
 N 1800 -870 1880 -870 {lab=VOUTN}
 N 1680 -990 1680 -940 {lab=I_P2}
@@ -51,6 +51,11 @@ N 1700 -550 1700 -530 {lab=VSS}
 N 1230 -1040 1280 -1040 {lab=I_P2}
 N 1230 -1020 1300 -1020 {lab=I_P3}
 N 1230 -1000 1360 -1000 {lab=I_N}
+N 1450 -850 1450 -760 {lab=Von}
+N 1360 -760 1450 -760 {lab=Von}
+N 1450 -850 1460 -850 {lab=Von}
+N 1450 -720 1450 -660 {lab=Vop}
+N 1415 -720 1450 -720 {lab=Vop}
 C {lab_wire.sym} 1170 -840 2 0 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1060 -520 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1080 -1110 0 1 {name=p2 sig_type=std_logic lab=VDD}
@@ -87,3 +92,7 @@ C {lab_wire.sym} 1280 -1040 0 1 {name=p30 sig_type=std_logic lab=I_P2}
 C {lab_wire.sym} 1300 -1020 0 1 {name=p31 sig_type=std_logic lab=I_P3}
 C {lab_wire.sym} 1680 -990 0 1 {name=p15 sig_type=std_logic lab=I_P2}
 C {lab_wire.sym} 1680 -730 0 1 {name=p26 sig_type=std_logic lab=I_P3}
+C {lab_wire.sym} 1450 -760 2 0 {name=p32 sig_type=std_logic lab=Von}
+C {lab_wire.sym} 1450 -720 2 0 {name=p33 sig_type=std_logic lab=Vop}
+C {opin.sym} 1460 -850 0 0 {name=p34 lab=Von}
+C {opin.sym} 1450 -660 0 0 {name=p35 lab=Vop}

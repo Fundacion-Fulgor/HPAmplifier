@@ -1,0 +1,48 @@
+.lib cornerMOSlv.lib mos_tt_stat
+
+.lib cornerRES.lib res_typ_stat
+
+.param mm_ok=1
+.param mc_ok=1
+.param temp=65
+.temp 65
+
+
+.param w_p=22u
+.param l_p=2u
+.param w_n=17u
+.param l_n=17u
+.param k=15
+
+
+.control
+
+let mc_runs = 500
+let run = 0
+set curplot=new
+set scratch=$curplot
+setplot $scratch
+let io=unitvec(mc_runs)
+
+***************** LOOP *********************
+dowhile run < mc_runs
+
+*dc Vds 0 3 0.01
+op
+set run=$&run
+set dt=$curplot
+setplot $scratch
+let out{$run}={$dt}.I(Vd2)
+let Io[run]={$dt}.I(Vd2)
+setplot $dt
+reset
+let run=run+1 
+end
+***************** LOOP *********************
+
+wrdata mc.csv {$scratch}.io
+write sg13_lv_nmos_cs.raw
+echo
+*print {$scratch}.io
+
+.endc

@@ -123,7 +123,7 @@ write OTA_Telescopic_TOP_TB_CL.raw
 .endc
 "
 
-spice_ignore=true}
+}
 C {devices/launcher.sym} -530 -250 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"
@@ -353,7 +353,7 @@ print onoise_total
 
 .endc
 "
-}
+spice_ignore=true}
 C {res.sym} 100 30 0 0 {name=R2
 value=50
 footprint=1206

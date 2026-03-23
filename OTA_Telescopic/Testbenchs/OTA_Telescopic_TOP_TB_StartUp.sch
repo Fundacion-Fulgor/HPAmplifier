@@ -42,6 +42,8 @@ N 1160 -320 1160 -290 {lab=GND}
 N 1160 -400 1160 -380 {lab=Vout1}
 N 1160 -400 1235 -400 {lab=Vout1}
 N 1235 -470 1235 -400 {lab=Vout1}
+N 1140 -510 1200 -510 {lab=Vop}
+N 1140 -490 1200 -490 {lab=Von}
 C {vsource.sym} 625 -120 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} 625 -70 0 0 {name=l5 lab=GND}
 C {vsource.sym} 190 -175 0 0 {name=V1 value="dc 1.8 pwl(0 0 10n 1.8)" savecurrent=false}
@@ -335,3 +337,7 @@ m=1
 }
 C {gnd.sym} 1160 -290 0 0 {name=l6 lab=GND
 }
+C {noconn.sym} 1200 -510 2 0 {name=l8}
+C {noconn.sym} 1200 -490 2 0 {name=l9}
+C {lab_wire.sym} 1200 -510 0 0 {name=p5 sig_type=std_logic lab=Vop}
+C {lab_wire.sym} 1200 -490 0 0 {name=p6 sig_type=std_logic lab=Von}

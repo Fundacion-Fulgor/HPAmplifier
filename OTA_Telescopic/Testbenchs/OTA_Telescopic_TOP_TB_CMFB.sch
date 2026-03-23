@@ -93,6 +93,10 @@ N 1340 260 1340 290 {lab=GND}
 N 1340 60 1340 200 {lab=V1}
 N 1280 60 1340 60 {lab=V1}
 N 1280 -15 1280 60 {lab=V1}
+N 390 -60 450 -60 {lab=Vop1}
+N 390 -40 450 -40 {lab=Von1}
+N 1190 -55 1250 -55 {lab=Vop}
+N 1190 -35 1250 -35 {lab=Von}
 C {vsource.sym} -35 180 0 0 {name=V7 value=1.25 savecurrent=false}
 C {gnd.sym} -35 230 0 0 {name=l5 lab=GND}
 C {capa-2.sym} 485 110 0 0 {name=C1
@@ -416,3 +420,11 @@ m=1
 }
 C {gnd.sym} 1340 290 0 0 {name=l14 lab=GND
 }
+C {noconn.sym} 450 -60 2 0 {name=l15}
+C {noconn.sym} 450 -40 2 0 {name=l16}
+C {lab_wire.sym} 450 -60 0 0 {name=p9 sig_type=std_logic lab=Vop1}
+C {lab_wire.sym} 450 -40 0 0 {name=p10 sig_type=std_logic lab=Von1}
+C {noconn.sym} 1250 -55 2 0 {name=l17}
+C {noconn.sym} 1250 -35 2 0 {name=l18}
+C {lab_wire.sym} 1250 -55 0 0 {name=p11 sig_type=std_logic lab=Vop}
+C {lab_wire.sym} 1250 -35 0 0 {name=p14 sig_type=std_logic lab=Von}
