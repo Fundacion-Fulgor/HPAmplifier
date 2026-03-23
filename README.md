@@ -16,7 +16,7 @@
 
 - Over Amaya       (MSc in EE Student at UNS)
 - Santiago Recalde (MSc in EE Student at UNS)
-- Ezequiel Georgis (BSc in EE Student at UNT)
+- Ezequiel Giorgis (BSc in EE Student at UNT)
 - Juan Moran       (BSc in EE Student at UNT)
 
 
