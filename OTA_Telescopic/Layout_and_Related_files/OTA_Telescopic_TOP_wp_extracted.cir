@@ -1,4 +1,4 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 25/03/2026 02:31
+* Extracted by KLayout with SG13G2 LVS runset on : 25/03/2026 03:12
 
 .SUBCKT OTA_Telescopic_TOP_wp VSS IB|I_P2 IB|I_P3 VOUTN VDD VOUTP IB|I_P
 + CMFBout VREF I_N CMFBin VN VP VPin VNin Von Vop VNout VPout
@@ -115,7 +115,7 @@ R$1558 VP VPout rppd w=0.6u l=6.73u ps=0 b=0 m=1
 R$1559 VNout Von rppd w=0.6u l=19u ps=0 b=0 m=1
 R$1560 VPout Vop rppd w=0.6u l=19u ps=0 b=0 m=1
 R$1561 \$276 \$792 rppd w=1.5u l=0.55u ps=0 b=0 m=1
-R$1562 \$277 \$793 rppd w=1.5u l=0.55u ps=0 b=0 m=1
+R$1562 \$277 \$815 rppd w=1.5u l=0.55u ps=0 b=0 m=1
 C$1563 \$792 Von cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
-C$1564 \$793 Vop cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
+C$1564 \$815 Vop cap_cmim w=21.4u l=21.4u A=457.96p P=85.6u m=1
 .ENDS OTA_Telescopic_TOP_wp
