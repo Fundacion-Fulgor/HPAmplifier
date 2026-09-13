@@ -159,7 +159,7 @@ b=0
 m=1
 }
 C {ammeter.sym} 140 -150 0 0 {name=Vd1}
-C {/home/eg/hdd/Documents/fulgor/CASS_bandgap/testBkp.sym} -710 -100 0 0 {name=x1}
+C {testBkp.sym} -710 -100 0 0 {name=x1}
 C {lab_wire.sym} -560 -130 0 1 {name=p3 sig_type=std_logic lab=VDD}
 C {gnd.sym} -560 -70 0 0 {name=l6 lab=GND}
 C {sg13g2_pr/sg13_lv_pmos.sym} -420 -110 0 0 {name=M6

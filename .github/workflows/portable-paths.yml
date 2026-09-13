@@ -1,0 +1,17 @@
+name: Portable paths
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check-portable-paths:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Reject non-portable absolute paths
+        run: sh scripts/check-portable-paths.sh
