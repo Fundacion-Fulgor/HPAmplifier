@@ -2,14 +2,29 @@
 
 set -eu
 
+staged=false
+for arg in "$@"; do
+  case "$arg" in
+    --staged) staged=true ;;
+    *) printf 'usage: check-portable-paths.sh [--staged]\n' >&2; exit 2 ;;
+  esac
+done
+
 # Match machine-specific Unix roots, Windows drive paths, and UNC shares.
 # The leading boundaries avoid treating URLs and relative directories as roots.
 path_boundary='(^|[[:space:]="'"'"'({[,]|[[:space:]]:)'
 forbidden_paths="${path_boundary}/(home|Users|Volumes|mnt|media|workspace|workspaces|foss/designs|headless)(/[^[:space:]\"'<>]*)?($|[[:space:]\"'<>),;}])|${path_boundary}[[:alpha:]]:[/\\\\][^[:space:]\"'<>]*|${path_boundary}(//|\\\\\\\\)[^/\\\\[:space:]]+[/\\\\][^[:space:]\"'<>]+"
 
 # Reports and old generated netlists retain tool provenance and are not inputs.
-if matches=$(git grep -I -n -E "$forbidden_paths" -- . \
+cached_flag=""
+if "$staged"; then
+  cached_flag="--cached"
+fi
+
+if matches=$(git grep $cached_flag -I -n -E "$forbidden_paths" -- . \
   ':(exclude)scripts/check-portable-paths.sh' \
+  ':(exclude)tests/test_fix_xschem_paths.py' \
+  ':(exclude)tests/test_check_portable_paths.py' \
   ':(exclude,glob)**/*.lyrdb' \
   ':(exclude,glob)**/*.log' \
   ':(exclude,glob)**/*.raw' \

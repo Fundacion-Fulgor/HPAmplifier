@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu
 root="$(git rev-parse --show-toplevel)"
 python3 "$root/scripts/fix_xschem_paths.py" --staged || exit $?
-exec sh "$root/scripts/check-portable-paths.sh"
+exec sh "$root/scripts/check-portable-paths.sh" --staged

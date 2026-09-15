@@ -57,6 +57,25 @@ Inside the "OTA_Telescopic" folder there are three directories:
 - OTA_Telescopic_TOP_TB_StartUp.sch: startup testbench.
 - Testbenches that include "io" correspond to the same analyses performed while accounting for the effects of the IOCells.
 
+## Setup
+
+Install the pre-commit hook (once per clone):
+
+```sh
+python3 scripts/install_hooks.py
+```
+
+The hook runs `scripts/fix_xschem_paths.py --staged` before
+`scripts/check-portable-paths.sh --staged`. The fixer rewrites an absolute
+Xschem symbol reference only for an exact tracked path or an explicitly
+supplied `--library-root`; unknown and ambiguous references abort for manual
+review. It refuses files with partially staged or other unstaged content
+changes.
+
+The path check rejects remaining non-portable paths in the staged index. SPICE
+provenance is not modified. CI runs the fixer read-only (`--all --check`) and
+the path check without modifying files.
+
 ## References
 
 [1] F. Tolosa, E. Dri, Á. F. Bocco and B. T. Reyes, "High Performance Amplifier in 130nm CMOS Technology using an Open Source Design Flow for 10Gbase-T Ethernet Transceivers," 2023 Argentine Conference on Electronics (CAE), Cordoba, Argentina, 2023, pp. 75-80, doi: 10.1109/CAE56623.2023.10087008.
