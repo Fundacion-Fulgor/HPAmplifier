@@ -100,7 +100,7 @@ C {sg13g2_pr/sg13_lv_pmos.sym} -200 -220 0 1 {name=M3
 l=1u
 w=10u
 ng=1
-m=4
+m=10
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -108,7 +108,7 @@ C {sg13g2_pr/sg13_lv_pmos.sym} 10 -220 0 0 {name=M4
 l=1u
 w=10u
 ng=1
-m=4
+m=10
 model=sg13_lv_pmos
 spiceprefix=X
 }
